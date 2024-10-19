@@ -103,7 +103,7 @@ const ScrollMore = () => {
               as="a"
               paddingY={3}
               fontFamily="monospace"
-              href="leek@gmail.com"
+              href="mailto:leek@gmail.com?subject=Hello%20LEEK&body=I%20love%20your%20memecoin!"
               target="_blank"
               rel="noreferrer"
               color={emailColor}

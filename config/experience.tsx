@@ -20,45 +20,51 @@ export const Experiences: {
   [key in Company]: CompanyDetail
 } = {
   Deloitte: {
-    name: 'Deloitte',
-    longName: 'Deloitte Consulthing Phils. Delivery Center',
-    subDetail: 'Consulthing Phils. Delivery Center',
-    url: 'https://www2.deloitte.com/',
-    position: 'Software Engineer Consultant',
-    duration: 'Sep 2021 - Present',
+    name: '🌱 Phase 1',
+    longName: 'Planting the Seeds',
+    subDetail: 'Launch',
+    url: 'https://pump.fun/',
+    position: 'Launch of LEEK on Solana',
+    duration: 'Okt 2024 - Present',
     logo: {
       light: '/worked_at_logos/deloitte/Deloitte_logo_black.png',
       dark: '/worked_at_logos/deloitte/Deloitte_logo.png',
     },
     roles: [
       <>
-       Contributed to the design and development of a comprehensive .NET payment integration project for a client
-       That covered credit card payments and subscription management.
-       Introduced Stripe as a new payment provider within the system architecture.
-       Participated in triaging, fixing and adding new functionalitiesto multiple Azure powered APIs of the same client.
+      Website and our unbelievably cool LEEK mascot revealed
       </>,
       <>
-        Worked as a Sitecore Backend on new{' '}
+        Fairlaunch on{' '}
         <Link
-          aria-label="Deloitte Digital AU"
-          href="https://www.deloittedigital.com.au/"
+          aria-label="PumpFun"
+          href="https://pump.fun/"
           target="_blank"
           rel="noreferrer"
         >
-          Deloitte Digital AU Site.
+          Pumpfun.
         </Link>
       </>,
       <>
-        Udergone training for .NET Sitecore 10,
-        Sitecore SXA and different topologies it provides.{' '} and Passed {' '}
+        Building the Community on{' '}
         <Link
-          aria-label="Sitecore 10 .NET Developer Certification"
-          href="/certification/Lawingco-Sitecore 10 NET Developer Cert.pdf"
+          aria-label="Twitter"
+          href="https://x.com/leekmeme_offic"
           target="_blank"
           rel="noreferrer"
         >
-          Sitecore 10 .NET Developer Certification.
+          Twitter
         </Link>
+        and 
+        <Link
+          aria-label="Telegram"
+          href="https://x.com/leekmeme_offic"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Telegram
+        </Link>
+        .
       </>,
     ],
   },

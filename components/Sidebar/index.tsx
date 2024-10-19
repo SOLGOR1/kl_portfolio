@@ -110,7 +110,9 @@ const Sidebar = () => {
             variants={fadeInUp}
             maxWidth={{ base: '100%', lg: '80%' }}
           >
-            Why Leek? Because nothing says
+            Why Leek?
+            <br></br>
+            Because nothing says
             <Text variant="emphasis" as="span">
               {' '}
               healthy, fresh, and financially fit
