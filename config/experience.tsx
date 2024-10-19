@@ -25,7 +25,7 @@ export const Experiences: {
     subDetail: 'Launch',
     url: 'https://pump.fun/',
     position: 'Launch of LEEK on Solana',
-    duration: 'Okt 2024 - Present',
+    duration: 'Okt 2024',
     logo: {
       light: '/worked_at_logos/deloitte/Deloitte_logo_black.png',
       dark: '/worked_at_logos/deloitte/Deloitte_logo.png',
@@ -55,7 +55,7 @@ export const Experiences: {
         >
           Twitter
         </Link>
-        and 
+        {' '}and{' '} 
         <Link
           aria-label="Telegram"
           href="https://x.com/leekmeme_offic"
@@ -69,94 +69,59 @@ export const Experiences: {
     ],
   },
   SCG: {
-    name: 'Scentregroup',
-    longName: 'Scentregroup Limited AU',
-    subDetail: 'via Prosource BPO',
-    url: 'https://www.scentregroup.com/',
-    position: 'Software Engineer',
-    duration: 'Feb 2020 - Sep 2021',
+    name: '🥬 Phase 2',
+    longName: 'Meme Magic',
+    subDetail: 'Reach',
+    url: 'https://www.launchmynft.io/',
+    position: 'Going Viral',
+    duration: 'Dez 2024',
     logo: {
       light: '/worked_at_logos/scg/SCG_400x400.jpg',
       dark: '/worked_at_logos/scg/SCG.png',
     },
     roles: [
       <>
-        Revamping the legacy Partner Portal into a new{' '}
-        <Link
-          aria-label="Westfield Marketing Hub"
-          href="https://partner.scentregroup.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Westfield Marketing Hub
-        </Link>{' '}
-        using NextJS and Typescript. Restructuring the old express app into a
-        newer architectural design approach.
+        Social media explosion: Memes, Raids, X Spaces
       </>,
       <>
-        Created multiple Contentful and Bynder extensions to improve BX process
-        better.
+        Listings on major DEXs
       </>,
       <>
-        Worked on maintaining{' '}
+        Exclusive Leek NFT collection drop{' '}
         <Link
           variant="primaryLink"
-          href="https://www.westfield.com.au/"
+          href="https://www.launchmynft.io/"
           target="_blank"
           rel="noreferrer"
         >
-          Westfield
-        </Link>{' '}
-        main site and Graphql apis written in NodeJS.
-      </>,
-      <>
-        Migrating of existing marketing email related tools and batch jobs from
-        Responsys into new platform called Braze.
-      </>,
-      <>
-        Hired at early 2020, first major task was helping with selecting a new
-        marketing vendor that can scale and also enable us to have
-        personalisation as well, selecting{' '}
-        <Link
-          aria-label="Braze"
-          href="https://www.braze.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Braze
-        </Link>{' '}
-        as a result.
+          Mint here
+        </Link>
       </>,
     ],
   },
   Blotocol: {
-    name: 'Blotocol',
-    longName: 'Blotocol Philippines',
-    subDetail: 'formerly IVP Global Inc.',
-    url: 'https://blotocol.com/',
-    position: 'Senior Software Engineer',
-    duration: 'Nov 2016 - Feb 2020',
+    name: '🍃 Phase 3',
+    longName: 'Leek Domination',
+    subDetail: 'DOMINATION',
+    url: 'https://solscan.io/',
+    position: 'Dominating SOL-Memes',
+    duration: 'Jan 2025',
     logo: {
       light: '/worked_at_logos/ivp/blotocol_logo-dark.png',
       dark: '/worked_at_logos/ivp/blotocol-logo-white.png',
     },
     roles: [
       <>
-        Developed a Twitter Raffle Campaign / Contest Bot called Camps with
-        statistics similar to Facebook Ads.
+        Staking
       </>,
       <>
-        In 2019 got promoted as Senior Software Engineer and worked with Cryto
-        Exchange, Smart Contracts and other APIs using several techs such as
-        NodeJS, .NET Core and React.
+        Partnerships
       </>,
       <>
-        Create highly scalable Japanese e-commerce sites. Most notable clients
-        were TV Tokyo, Layla EC using .NET.
+        Mass adoption: Leeks on everyone's lips and in their wallets
       </>,
       <>
-        Hired at 2016, Undergone Japanese language training first. Shortly
-        after, worked with in-house .NET MVC Framework called ERS.
+        and more...
       </>,
     ],
   },
