@@ -52,18 +52,7 @@ const FeaturedWorksSection = () => {
             isMobile={isMobile}
           />
         </MotionGridItem>
-        <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
-          <FeaturedCard
-            idx={1}
-            title="We are Live!"
-            src="/works/tobira/pumpfun.webp"
-            description="We are live on PumpFun."
-            height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://pump.fun"
-            objectPosition="right 20%"
-            isMobile={isMobile}
-          />
-        </MotionGridItem>
+
         <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
             idx={2}
@@ -75,6 +64,7 @@ const FeaturedWorksSection = () => {
             isMobile={isMobile}
           />
         </MotionGridItem>
+        
       </MotionGrid>
     </Stack>
   )
