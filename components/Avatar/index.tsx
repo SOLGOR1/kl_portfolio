@@ -51,7 +51,7 @@ const Avatar = () => {
       >
         <ChkImage
           src={imgAvatar}
-          alt="KL Lawingco Avatar"
+          alt="LEEK"
           htmlWidth="250"
           htmlHeight="250"
           margin="auto"
@@ -60,12 +60,12 @@ const Avatar = () => {
         <Text textAlign="center" fontSize="smaller" variant="description">
           Art by{' '}
           <Link
-            href="https://twitter.com/kojiro_ai"
+            href="https://x.com/leekmeme_offic"
             target="_blank"
             aria-label="KojiroArt"
             rel="noreferrer"
           >
-            KojiroArt
+            LEEK
           </Link>
         </Text>
       </MotionBox>

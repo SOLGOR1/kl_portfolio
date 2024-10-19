@@ -133,7 +133,7 @@ const Navigation = () => {
               rel="noreferrer"
               onClick={onMenuItemClick}
             >
-              About
+              Home
             </Button>
           </Box>
           <Box
@@ -154,7 +154,7 @@ const Navigation = () => {
               rel="noreferrer"
               onClick={onMenuItemClick}
             >
-              Experience
+              Roadmap
             </Button>
           </Box>
           <Box
@@ -175,7 +175,7 @@ const Navigation = () => {
               rel="noreferrer"
               onClick={onMenuItemClick}
             >
-              Works
+              News
             </Button>
           </Box>
           <Box
@@ -196,7 +196,7 @@ const Navigation = () => {
               rel="noreferrer"
               onClick={onMenuItemClick}
             >
-              Contact
+              Highlights
             </Button>
           </Box>
           {!isMobile && (
