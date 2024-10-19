@@ -14,7 +14,9 @@ import {
 } from '@chakra-ui/react'
 import {
   SiAdguard,
-  SiCachet,
+  SiIndeed,
+  SiCodeigniter,
+  SiCheckmarx,
 } from 'react-icons/si'
 import { GiCoffeePot } from 'react-icons/gi'
 import { IoMdOpen } from 'react-icons/io'
@@ -80,17 +82,17 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             Fair Launch
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiCachet} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiCodeigniter} color={emphasis} fontSize="2em" />
             LP Burned
           </ListItem>
         </List>
         <List spacing={3}>
         <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiCachet} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiCheckmarx} color={emphasis} fontSize="2em" />
             Mint Authority Revoked
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiCachet} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiIndeed} color={emphasis} fontSize="2em" />
             Mutable Info Revoked
           </ListItem>
         </List>
