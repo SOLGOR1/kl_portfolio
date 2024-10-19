@@ -62,7 +62,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
           </Text>
         </Tooltip>{' '}
         <br /> <br />
-        Here are few technologies that are cup of our{' '}
+        Here are few features that are cup of our{' '}
         <Tooltip
           label="We never drink Tea!"
           aria-label="We hate Tea!"
@@ -81,6 +81,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             <ListIcon as={SiAdguard} color={emphasis} fontSize="2em" />
             Fair Launch
           </ListItem>
+          <br /> <br />
           <ListItem fontSize="small" display="flex" alignItems="center">
             <ListIcon as={SiCodeigniter} color={emphasis} fontSize="2em" />
             LP Burned
@@ -91,11 +92,13 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             <ListIcon as={SiCheckmarx} color={emphasis} fontSize="2em" />
             Mint Authority Revoked
           </ListItem>
+          <br /> <br />
           <ListItem fontSize="small" display="flex" alignItems="center">
             <ListIcon as={SiIndeed} color={emphasis} fontSize="2em" />
             Mutable Info Revoked
           </ListItem>
         </List>
+        <br /> <br />
         <Box>
           <Text
             as="button"
