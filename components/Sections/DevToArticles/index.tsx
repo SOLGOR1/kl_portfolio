@@ -29,10 +29,10 @@ const DevToArticles = ({ articles }: { articles: Article[] }) => {
           fontVariantCaps: 'small-caps',
         }}
       >
-        Dev.to blog
+        Highlights - Whats Poppin on Twitter?
       </Heading>
       <Text variant="description">
-        I write dev related things from time to time!
+        Stay in the loop with the latest tweets from the LEEK universe!
       </Text>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 5, md: 10 }}>
         {articles.map((item) => (

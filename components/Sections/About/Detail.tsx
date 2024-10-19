@@ -48,12 +48,17 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
           fontVariantCaps: 'small-caps',
         }}
       >
-        Where Degens Unite.
+        Our Vision
       </Heading>
       <Text variant="description">
-        Welcome to the <b>LEEK</b> universe, where degens from all corners of the cryptoverse unite to meme.
-        We`ve been coding professionally for {professionalYears} years now and
-        we are currently working on <b>LEEK</b>.{' '}
+        LEEK is a memecoin on a mission to <b>unite the degens</b> and shoot that green rocket straight to the moon. 
+        Were here to bridge the gap between crypto chaos and unstoppable fun, backed by based devs and one of the freshest communities in Web3.
+
+        This project has been in the works for months, carefully planned to disrupt the norm and bring meme culture to a whole new level. 
+        While weve set some fixed goals, we believe in the power of our degenerate community to decide the rest as we go. 
+        After all, when degens unite, anything is possible. 🚀
+
+        The Devs behind LEEK are coding professionally for {professionalYears} years now.{' '}
         <br /><br />
         <Tooltip
           label="Send LEEK to the moon and beyond, fueled by the collective genius of degens like you!"
@@ -67,7 +72,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         <br /> <br />
         Here are few technologies that are cup of our{' '}
         <Tooltip
-          label="We only drink tea if I needed too!"
+          label="We never drink Tea!"
           aria-label="We hate Tea!"
           hasArrow
         >
