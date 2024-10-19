@@ -53,12 +53,8 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
       <Text variant="description">
         LEEK is a memecoin on a mission to <b>unite the degens</b> and shoot that green rocket straight to the moon. 
         Were here to bridge the gap between crypto chaos and unstoppable fun, backed by based devs and one of the freshest communities in Web3.
-
+        <br /><br />
         This project has been in the works for months, carefully planned to disrupt the norm and bring meme culture to a whole new level. 
-        While weve set some fixed goals, we believe in the power of our degenerate community to decide the rest as we go. 
-        After all, when degens unite, anything is possible. 🚀
-
-        The Devs behind LEEK are coding professionally for {professionalYears} years now.{' '}
         <br /><br />
         <Tooltip
           label="Send LEEK to the moon and beyond, fueled by the collective genius of degens like you!"
