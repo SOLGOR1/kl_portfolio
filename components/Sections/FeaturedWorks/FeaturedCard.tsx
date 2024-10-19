@@ -118,7 +118,7 @@ const ProjectDescription = ({
       target="_blank"
       marginY={{ base: 3, md: 0 }}
     >
-      View Project
+      Read more
     </Button>
   </Container>
 )

@@ -52,9 +52,13 @@ const GetInTouch = () => {
         </Text>
       </Heading>
       <Text variant="description">
-      LEEK is a memecoin, born purely for fun and community hype. It has no utility, no inherent value, and no use case—other than bringing laughter to the degenerate masses. 🚀
+      LEEK is a memecoin, born purely for fun and community hype. 
       <br></br>
-      This is not financial advice, and yes, it could absolutely go to zero. So, only toss in what you’re willing to lose.
+      It has no utility, no inherent value, and no use case—other than bringing laughter to the degenerate masses. 🚀
+      <br></br>
+      This is not financial advice, and yes, it could absolutely go to zero. 
+      <br></br>
+      So, only toss in what you’re willing to lose.
       <br></br>
       Degens unite, but always DYOR!{' '}
       </Text>
@@ -69,7 +73,7 @@ const GetInTouch = () => {
           variant="description"
           textDecoration="none"
           rel="noreferrer"
-          href="https://github.com/klawingco/kl_portfolio"
+          href="https://x.com/leekmeme_offic"
           target="_blank"
           _focus={{ boxShadow: 'none' }}
         >
