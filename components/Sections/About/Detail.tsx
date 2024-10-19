@@ -48,12 +48,13 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
           fontVariantCaps: 'small-caps',
         }}
       >
-        What i do.
+        Where Degens Unite.
       </Heading>
       <Text variant="description">
-        I`ve been coding professionally for {professionalYears} years now and
-        currently working as a <b>Software Engineer</b> that focuses on{' '}
-        <b>architecture</b>, <b>APIs</b>,{' '}
+        Welcome to the <b>LEEK</b> universe, where degens from all corners of the cryptoverse unite to meme.
+        We`ve been coding professionally for {professionalYears} years now and
+        we are currently working on <b>LEEK</b> The mission?{' '}
+        <b>Send LEEK to the moon and beyond</b>, <b>fueled by the collective genius of degens like you</b>.{' '}
         <Tooltip
           label="Ha!. Or more accurately TECH DEBT"
           aria-label="Tech Debt?"
@@ -65,10 +66,10 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         </Tooltip>{' '}
         and even <b>front end integration</b> stuff now, how time flies!
         <br /> <br />
-        Here are few technologies that are cup of my{' '}
+        Here are few technologies that are cup of our{' '}
         <Tooltip
-          label="I only drink tea if I needed too!"
-          aria-label="I hate Tea!"
+          label="We only drink tea if I needed too!"
+          aria-label="We hate Tea!"
           hasArrow
         >
           <Text as="span" variant="emphasis" textDecorationLine="line-through">
