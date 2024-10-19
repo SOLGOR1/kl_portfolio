@@ -81,7 +81,6 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             <ListIcon as={SiAdguard} color={emphasis} fontSize="2em" />
             Fair Launch
           </ListItem>
-          <br /> <br />
           <ListItem fontSize="small" display="flex" alignItems="center">
             <ListIcon as={SiCodeigniter} color={emphasis} fontSize="2em" />
             LP Burned
@@ -92,7 +91,6 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             <ListIcon as={SiCheckmarx} color={emphasis} fontSize="2em" />
             Mint Authority Revoked
           </ListItem>
-          <br /> <br />
           <ListItem fontSize="small" display="flex" alignItems="center">
             <ListIcon as={SiIndeed} color={emphasis} fontSize="2em" />
             Mutable Info Revoked

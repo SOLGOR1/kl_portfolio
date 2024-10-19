@@ -39,7 +39,7 @@ const GetInTouch = () => {
           fontVariantCaps: 'small-caps',
         }}
       >
-        Say hi!{' '}
+        And Don’t Forget:{' '}
         <Text as="span" fontSize="2xl" variant="emphasis">
           <motion.div
             style={{ display: 'inline-block' }}
@@ -52,19 +52,11 @@ const GetInTouch = () => {
         </Text>
       </Heading>
       <Text variant="description">
-        Though, I am fairly introverted myself. I do reply to messages as long
-        as my human interaction battery lasts. Coding, work, movies or even weeb
-        stuff, anything is cool. So feel free to message me on any of my social
-        media or shoot me an{' '}
-        <Link
-          href="mailto:marcjhon18@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          email
-        </Link>
-        .
-      </Text>
+      LEEK is a memecoin, born purely for fun and community hype. It has no utility, no inherent value, and no use case—other than bringing laughter to the degenerate masses. 🚀
+      <br></br>
+      This is not financial advice, and yes, it could absolutely go to zero. So, only toss in what you’re willing to lose.
+      <br></br>
+      Degens unite, but always DYOR!{' '}
 
       <Box
         spacing={0.5}
@@ -84,7 +76,7 @@ const GetInTouch = () => {
           <Text as="span">
             <Icon as={RiGithubFill} h={6} w={6} /> <br />
             Designed and Made with <Icon as={RiHeartPulseFill} /> <br />
-            KL Lawingco <Icon as={RiCopyleftLine} /> 2021
+            LEEK <Icon as={RiCopyleftLine} /> 2024
           </Text>
         </Link>
       </Box>
