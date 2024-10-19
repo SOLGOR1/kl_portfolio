@@ -16,7 +16,7 @@ const DetailSection = () => (
       Roadmap
     </Heading>
     <Text variant="description">
-      BLABLABLABLABLA{' '}
+    Ready to watch a vegetable conquer the crypto space? Hop in, and let’s go full stalk ahead.{' '}
     </Text>
 
     <ExperienceTab />

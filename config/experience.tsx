@@ -27,8 +27,8 @@ export const Experiences: {
     position: 'Launch of LEEK on Solana',
     duration: 'Okt 2024',
     logo: {
-      light: '/worked_at_logos/deloitte/Deloitte_logo_black.png',
-      dark: '/worked_at_logos/deloitte/Deloitte_logo.png',
+      light: '/worked_at_logos/deloitte/1dark.png',
+      dark: '/worked_at_logos/deloitte/1light.png',
     },
     roles: [
       <>
@@ -76,8 +76,8 @@ export const Experiences: {
     position: 'Going Viral',
     duration: 'Dez 2024',
     logo: {
-      light: '/worked_at_logos/scg/SCG_400x400.jpg',
-      dark: '/worked_at_logos/scg/SCG.png',
+      light: '/worked_at_logos/scg/2dark.png',
+      dark: '/worked_at_logos/scg/2light.png',
     },
     roles: [
       <>
@@ -107,8 +107,8 @@ export const Experiences: {
     position: 'Dominating SOL-Memes',
     duration: 'Jan 2025',
     logo: {
-      light: '/worked_at_logos/ivp/blotocol_logo-dark.png',
-      dark: '/worked_at_logos/ivp/blotocol-logo-white.png',
+      light: '/worked_at_logos/ivp/3dark.png',
+      dark: '/worked_at_logos/ivp/3light.png',
     },
     roles: [
       <>
