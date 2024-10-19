@@ -53,15 +53,14 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
       <Text variant="description">
         Welcome to the <b>LEEK</b> universe, where degens from all corners of the cryptoverse unite to meme.
         We`ve been coding professionally for {professionalYears} years now and
-        we are currently working on <b>LEEK</b> The mission?{' '}
-        <b>Send LEEK to the moon and beyond</b>, <b>fueled by the collective genius of degens like you</b>.{' '}
+        we are currently working on <b>LEEK</b>.{' '}
         <Tooltip
-          label="Ha!. Or more accurately TECH DEBT"
+          label="Send LEEK to the moon and beyond, fueled by the collective genius of degens like you!"
           aria-label="Tech Debt?"
           hasArrow
         >
           <Text as="span" variant="emphasis">
-            <b>nitty-gritty business logics</b>
+            <b>The mission?</b>
           </Text>
         </Tooltip>{' '}
         and even <b>front end integration</b> stuff now, how time flies!
