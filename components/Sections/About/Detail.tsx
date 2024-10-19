@@ -13,14 +13,8 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 import {
-  SiDotNet,
-  SiJavascript,
-  SiTypescript,
-  SiGraphql,
-  SiReact,
-  SiNextDotJs,
-  SiNodeDotJs,
-  SiDocker,
+  SiAdguard,
+  SiCachet,
 } from 'react-icons/si'
 import { GiCoffeePot } from 'react-icons/gi'
 import { IoMdOpen } from 'react-icons/io'
@@ -82,39 +76,22 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
       <SimpleGrid columns={2} spacing={4}>
         <List spacing={3}>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiDotNet} color={emphasis} fontSize="2em" />
-            C# - .NET.Core
+            <ListIcon as={SiAdguard} color={emphasis} fontSize="2em" />
+            Fair Launch
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiJavascript} color={emphasis} fontSize="2em" />
-            Javascript (ES6+)
-          </ListItem>
-          <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiTypescript} color={emphasis} fontSize="2em" />
-            Typescript
-          </ListItem>
-
-          <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiNodeDotJs} color={emphasis} fontSize="2em" />
-            Node
+            <ListIcon as={SiCachet} color={emphasis} fontSize="2em" />
+            LP Burned
           </ListItem>
         </List>
         <List spacing={3}>
-          <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiGraphql} color={emphasis} fontSize="2em" />
-            Graphql
+        <ListItem fontSize="small" display="flex" alignItems="center">
+            <ListIcon as={SiCachet} color={emphasis} fontSize="2em" />
+            Mint Authority Revoked
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiReact} color={emphasis} fontSize="2em" />
-            React
-          </ListItem>
-          <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiNextDotJs} color={emphasis} fontSize="2em" />
-            NextJS
-          </ListItem>
-          <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiDocker} color={emphasis} fontSize="2em" />
-            Docker
+            <ListIcon as={SiCachet} color={emphasis} fontSize="2em" />
+            Mutable Info Revoked
           </ListItem>
         </List>
         <Box>
@@ -125,7 +102,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             textAlign="left"
             onClick={onOpen}
           >
-            See our full arsenal <Icon as={IoMdOpen} />
+            See our full DEV arsenal <Icon as={IoMdOpen} />
           </Text>
         </Box>
       </SimpleGrid>
