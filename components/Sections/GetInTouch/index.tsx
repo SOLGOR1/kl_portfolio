@@ -57,7 +57,7 @@ const GetInTouch = () => {
       This is not financial advice, and yes, it could absolutely go to zero. So, only toss in what you’re willing to lose.
       <br></br>
       Degens unite, but always DYOR!{' '}
-
+      </Text>
       <Box
         spacing={0.5}
         textAlign="center"
