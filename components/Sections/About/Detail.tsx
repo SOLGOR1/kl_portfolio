@@ -54,6 +54,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         Welcome to the <b>LEEK</b> universe, where degens from all corners of the cryptoverse unite to meme.
         We`ve been coding professionally for {professionalYears} years now and
         we are currently working on <b>LEEK</b>.{' '}
+        <br /><br />
         <Tooltip
           label="Send LEEK to the moon and beyond, fueled by the collective genius of degens like you!"
           aria-label="Tech Debt?"
@@ -63,7 +64,6 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             <b>The mission?</b>
           </Text>
         </Tooltip>{' '}
-        and even <b>front end integration</b> stuff now, how time flies!
         <br /> <br />
         Here are few technologies that are cup of our{' '}
         <Tooltip
@@ -124,7 +124,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             textAlign="left"
             onClick={onOpen}
           >
-            See my full arsenal <Icon as={IoMdOpen} />
+            See our full arsenal <Icon as={IoMdOpen} />
           </Text>
         </Box>
       </SimpleGrid>
