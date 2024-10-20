@@ -103,7 +103,7 @@ const ScrollMore = () => {
               as="a"
               paddingY={3}
               fontFamily="monospace"
-              href="mailto:leek@gmail.com?subject=Hello%20LEEK&body=I%20love%20your%20memecoin!"
+              href="mailto:leek.sol@gmx.de?subject=Hello%20LEEK&body=I%20love%20your%20memecoin!"
               target="_blank"
               rel="noreferrer"
               color={emailColor}
@@ -130,7 +130,7 @@ const ScrollMore = () => {
                 marginTop: '10px',
               }}
             >
-              leek@gmail.com{' '}
+              leek.sol@gmx.de{' '}
             </Text>
           </motion.div>
         )}
