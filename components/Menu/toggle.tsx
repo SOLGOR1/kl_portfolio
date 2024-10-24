@@ -1,13 +1,13 @@
 /* eslint-disable react/no-multi-comp */
 import * as React from 'react'
-import { motion } from 'framer-motion'
+import { motion, Variants, Transition } from 'framer-motion'
 
 // Define props for Path component more explicitly
 interface PathProps {
   isDarkMode: boolean
-  d?: string // Define `d` as an optional string, since it's passed in
-  variants?: any // You can specify a more precise type here if known
-  transition?: any // Specify types for transition if known
+  d?: string // `d` is optional string
+  variants?: Variants // Use Framer Motion's Variants type
+  transition?: Transition // Use Framer Motion's Transition type
 }
 
 // Path component for drawing the SVG paths
