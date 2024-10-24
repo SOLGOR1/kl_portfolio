@@ -1,57 +1,61 @@
-import { Box, Image as ChkImage, Text, Link, Skeleton } from '@chakra-ui/react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { useEffect } from 'react'
-import { avatarAnimation } from 'config/animations'
+import { Box, Image as ChkImage, Text, Link, Skeleton, useBoolean } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { avatarAnimation } from 'config/animations';
 
 const AvatarImages = {
   DarkMode: '/KL_avatar.png',
   LightMode: '/KL_avatar_light.png',
-}
+};
 
-// Default to LightMode; you can adjust this based on your theme
-const isDarkMode = false; // Replace with your logic to check if dark mode is enabled
+// Set up dark mode logic
+const isDarkMode = false; // Replace with actual dark mode check
 
 const Avatar = () => {
-  const MotionBox = motion(Box)
-  const imgAvatar = isDarkMode ? AvatarImages.DarkMode : AvatarImages.LightMode
+  const MotionBox = motion(Box);
+  const imgAvatar = isDarkMode ? AvatarImages.DarkMode : AvatarImages.LightMode;
+
+  const [isLoaded, setIsLoaded] = useBoolean(false);
 
   useEffect(() => {
-    // Preloading and caching images
-    const images = [AvatarImages.DarkMode, AvatarImages.LightMode]
-    const preloadedImages = images.map((imageSrc) => {
-      const img = new Image()
-      img.src = imageSrc
-      return img
-    })
-    window.preloadedPictures = preloadedImages
-  }, [])
+    // Preload the avatar images
+    const img = new Image();
+    img.src = imgAvatar;
+  }, [imgAvatar]);
 
   return (
-    <AnimatePresence>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <MotionBox
         id="klAvatar"
         boxSize={{ base: 64, lg: 'sm' }}
         padding={{ base: 8 }}
         marginBottom={{ base: 10, md: 0, lg: 0 }}
-        initial="initial"
-        animate={'animate'}
         variants={avatarAnimation}
-        exit={{ opacity: 0 }}
       >
+        {/* Skeleton shown until image is fully loaded */}
+        {!isLoaded && (
+          <Skeleton
+            height="250px"
+            width="250px"
+            borderRadius="full"
+            margin="auto"
+          />
+        )}
+        {/* Image shown once loaded */}
         <ChkImage
           src={imgAvatar}
           alt="LEEK"
           width="250"
           height="250"
           margin="auto"
-          fallback={
-            <Skeleton
-              height="250px"
-              width="250px"
-              borderRadius="full" // Make it circular
-            />
-          }
+          onLoad={() => setIsLoaded.on()} // Mark image as loaded
+          style={{ display: isLoaded ? 'block' : 'none' }} // Show image only when loaded
         />
+
         <Text textAlign="center" fontSize="smaller" variant="description">
           Art by{' '}
           <Link
@@ -64,8 +68,8 @@ const Avatar = () => {
           </Link>
         </Text>
       </MotionBox>
-    </AnimatePresence>
-  )
-}
+    </motion.div>
+  );
+};
 
-export default Avatar
+export default Avatar;
