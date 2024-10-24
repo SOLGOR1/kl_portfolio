@@ -15,35 +15,36 @@ const AvatarImages = {
 
 const Avatar = () => {
   const { colorMode } = useColorMode()
-
-  // Use default avatar image to avoid blank loading screen
-  const [imgAvatar, setImgAvatar] = useState(AvatarImages.DarkMode)
+  const [imgAvatar, setImgAvatar] = useState(AvatarImages.DarkMode) // Default image
   const [isLoaded, setIsLoaded] = useState(false)
 
-  // Update image based on color mode
+  // Update image based on color mode, but ensure the default image is displayed initially
   useEffect(() => {
-    setImgAvatar(
+    const currentImg =
       colorMode === 'dark' ? AvatarImages.DarkMode : AvatarImages.LightMode
-    )
+    setImgAvatar(currentImg)
   }, [colorMode])
 
-  // Preload both images
   useEffect(() => {
+    // Preload images
     const preloadImages = (src: string) => {
       const img = new Image()
       img.src = src
       img.onload = () => {
         console.log(`Preloaded: ${src}`)
+        if (src === imgAvatar) {
+          setIsLoaded(true) // Set loading to false once the image is loaded
+        }
       }
       img.onerror = () => {
         console.error(`Failed to preload: ${src}`)
       }
     }
 
-    // Preload images for dark and light mode
+    // Preload both images for dark and light mode
     preloadImages(AvatarImages.DarkMode)
     preloadImages(AvatarImages.LightMode)
-  }, [])
+  }, [imgAvatar])
 
   return (
     <Box
