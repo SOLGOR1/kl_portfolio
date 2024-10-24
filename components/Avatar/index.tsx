@@ -5,44 +5,44 @@ import {
   Link,
   Skeleton,
   useColorMode,
-} from '@chakra-ui/react';
-import { useEffect, useState } from 'react';
+} from '@chakra-ui/react'
+import { useEffect, useState } from 'react'
 
 const AvatarImages = {
   DarkMode: '/KL_avatar.png',
   LightMode: '/KL_avatar_light.png',
-};
+}
 
 const Avatar = () => {
-  const { colorMode, setColorMode } = useColorMode();
+  const { colorMode, setColorMode } = useColorMode()
 
   // Set initial mode to dark on mount
   useEffect(() => {
-    setColorMode('dark');
-  }, [setColorMode]);
+    setColorMode('dark')
+  }, [setColorMode])
 
   const [imgAvatar, setImgAvatar] = useState(
     colorMode === 'dark' ? AvatarImages.DarkMode : AvatarImages.LightMode
-  );
+  )
 
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
     const preloadImages = (src: string) => {
-      const img = new Image();
-      img.src = src;
+      const img = new Image()
+      img.src = src
       img.onload = () => {
-        console.log(`Preloaded: ${src}`);
-      };
+        console.log(`Preloaded: ${src}`)
+      }
       img.onerror = () => {
-        console.error(`Failed to preload: ${src}`);
-      };
-    };
+        console.error(`Failed to preload: ${src}`)
+      }
+    }
 
     // Preload images for dark and light mode
-    preloadImages(AvatarImages.DarkMode);
-    preloadImages(AvatarImages.LightMode);
-  }, []);
+    preloadImages(AvatarImages.DarkMode)
+    preloadImages(AvatarImages.LightMode)
+  }, [])
 
   return (
     <Box
@@ -67,8 +67,8 @@ const Avatar = () => {
         height="250px"
         margin="auto"
         onLoad={() => {
-          console.log('Image loaded successfully');
-          setIsLoaded(true); // Set loading to false
+          console.log('Image loaded successfully')
+          setIsLoaded(true) // Set loading to false
         }}
         style={{
           display: isLoaded ? 'block' : 'none', // Show image when loaded
@@ -88,7 +88,7 @@ const Avatar = () => {
         </Link>
       </Text>
     </Box>
-  );
-};
+  )
+}
 
-export default Avatar;
+export default Avatar
