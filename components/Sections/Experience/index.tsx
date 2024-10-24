@@ -1,8 +1,8 @@
-import { memo } from 'react'
-import { Heading, Text, Stack } from '@chakra-ui/react'
-import ExperienceTab from './ExperienceTab'
+import { memo, FC } from 'react';
+import { Heading, Text, Stack } from '@chakra-ui/react';
+import ExperienceTab from './ExperienceTab';
 
-const DetailSection = () => (
+const DetailSection: FC = () => (
   <Stack
     width={{ base: '99%', lg: '60%', xl: '75%' }}
     height="100%"
@@ -18,11 +18,11 @@ const DetailSection = () => (
     </Heading>
     <Text variant="description">
       Ready to watch a vegetable conquer the crypto space? Hop in, and let’s go
-      full stalk ahead.{' '}
+      full stalk ahead.
     </Text>
 
     <ExperienceTab />
   </Stack>
-)
+);
 
-export default memo(DetailSection)
+export default memo(DetailSection);
