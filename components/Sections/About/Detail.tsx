@@ -60,9 +60,9 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
           <Text as="span" variant="emphasis">
             <b>The mission?</b>
           </Text>
-        </Tooltip>{' '}
+        </Tooltip>
         <br /><br />
-        Here are few features that are our cup of{' '}
+        Here are a few features that are our cup of{' '}
         <Tooltip
           label="We never drink Tea!"
           aria-label="We hate Tea!"
