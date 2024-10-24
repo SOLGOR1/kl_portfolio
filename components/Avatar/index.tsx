@@ -32,6 +32,12 @@ const Avatar = () => {
     const preloadImages = (src: string) => {
       const img = new Image()
       img.src = src
+      img.onload = () => {
+        console.log(`Preloaded: ${src}`)
+      }
+      img.onerror = () => {
+        console.error(`Failed to preload: ${src}`)
+      }
     }
 
     // Preload images for dark and light mode
@@ -67,11 +73,11 @@ const Avatar = () => {
         }}
         onError={() => {
           console.error(`Failed to load image: ${imgAvatar}`)
-          setImgAvatar('/logo.png')
-          setIsLoaded.off()
+          setImgAvatar('/logo.png') // Fallback image
+          setIsLoaded.off() // Image failed to load, so keep loading state
         }}
         style={{
-          display: isLoaded || !imgAvatar ? 'block' : 'none',
+          display: isLoaded ? 'block' : 'none',
           transition: 'opacity 0.3s ease-in-out',
           opacity: isLoaded ? 1 : 0,
         }}
