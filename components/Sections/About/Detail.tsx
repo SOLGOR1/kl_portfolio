@@ -28,9 +28,7 @@ type ISkillSetModal = {
 
 const Detail = ({ onOpen }: ISkillSetModal) => {
   const emphasis = useColorModeValue('teal.500', 'cyan.200');
-  const currentYear = new Date().getFullYear();
-  // Entferne, wenn nicht verwendet
-  // const professionalYears = currentYear - 2016;
+  const currentYear = new Date().getFullYear(); // This can be kept or removed if unused
 
   return (
     <Stack
