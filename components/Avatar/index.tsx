@@ -1,27 +1,34 @@
-import { Box, Image as ChkImage, Text, Link, Skeleton, useBoolean } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
-import { useEffect } from 'react';
-import { avatarAnimation } from 'config/animations';
+import {
+  Box,
+  Image as ChkImage,
+  Text,
+  Link,
+  Skeleton,
+  useBoolean,
+} from '@chakra-ui/react'
+import { motion } from 'framer-motion'
+import { useEffect } from 'react'
+import { avatarAnimation } from 'config/animations'
 
 const AvatarImages = {
   DarkMode: '/KL_avatar.png',
   LightMode: '/KL_avatar_light.png',
-};
+}
 
 // Set up dark mode logic
-const isDarkMode = false; // Replace with actual dark mode check
+const isDarkMode = false // Replace with actual dark mode check
 
 const Avatar = () => {
-  const MotionBox = motion(Box);
-  const imgAvatar = isDarkMode ? AvatarImages.DarkMode : AvatarImages.LightMode;
+  const MotionBox = motion(Box)
+  const imgAvatar = isDarkMode ? AvatarImages.DarkMode : AvatarImages.LightMode
 
-  const [isLoaded, setIsLoaded] = useBoolean(false);
+  const [isLoaded, setIsLoaded] = useBoolean(false)
 
   useEffect(() => {
     // Preload the avatar images
-    const img = new Image();
-    img.src = imgAvatar;
-  }, [imgAvatar]);
+    const img = new Image()
+    img.src = imgAvatar
+  }, [imgAvatar])
 
   return (
     <motion.div
@@ -69,7 +76,7 @@ const Avatar = () => {
         </Text>
       </MotionBox>
     </motion.div>
-  );
-};
+  )
+}
 
-export default Avatar;
+export default Avatar

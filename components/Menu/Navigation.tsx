@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react';
+import { memo, useCallback } from 'react'
 import {
   Container,
   Button,
@@ -8,47 +8,48 @@ import {
   useColorMode,
   useColorModeValue,
   useBreakpointValue,
-} from '@chakra-ui/react';
-import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-import { motion, useCycle } from 'framer-motion';
-import styles from './styles.module.css';
-import MobileMenu from './toggle';
-import { ThemeMode, mobileBreakpointsMap } from 'config/theme';
-import { easing, menuAnim } from 'config/animations';
-import useScrollDirection, { ScrollDirection } from 'hooks/useScrollDirection';
+} from '@chakra-ui/react'
+import { MoonIcon, SunIcon } from '@chakra-ui/icons'
+import { motion, useCycle } from 'framer-motion'
+import styles from './styles.module.css'
+import MobileMenu from './toggle'
+import { ThemeMode, mobileBreakpointsMap } from 'config/theme'
+import { easing, menuAnim } from 'config/animations'
+import useScrollDirection, { ScrollDirection } from 'hooks/useScrollDirection'
 
 const Navigation = () => {
-  const { toggleColorMode, colorMode } = useColorMode();
-  const MotionContainer = motion(Container);
-  const [isOpen, toggleOpen] = useCycle(false, true);
-  const isMobile = useBreakpointValue(mobileBreakpointsMap) as boolean; // Explicitly define as boolean
+  const { toggleColorMode, colorMode } = useColorMode()
+  const MotionContainer = motion(Container)
+  const [isOpen, toggleOpen] = useCycle(false, true)
+  const isMobile = useBreakpointValue(mobileBreakpointsMap) as boolean // Explicitly define as boolean
   const menuButtonSize = useBreakpointValue({
     base: 'xl',
     md: 'sm',
-  }) as string; // Explicitly define as string
+  }) as string // Explicitly define as string
 
   const bg = useColorModeValue(
     'rgba(237, 242, 247, 0.95)',
     'rgba(18, 18, 18, 0.9)'
-  );
+  )
 
-  const borderColor = useColorModeValue('teal.500', 'cyan.200');
+  const borderColor = useColorModeValue('teal.500', 'cyan.200')
 
-  const IsDark = colorMode === ThemeMode.Dark;
-  const btnClassName = `${styles.blogBtn} ${!IsDark && styles.dark}`;
-  const Icon = IsDark ? SunIcon : MoonIcon;
+  const IsDark = colorMode === ThemeMode.Dark
+  const btnClassName = `${styles.blogBtn} ${!IsDark && styles.dark}`
+  const Icon = IsDark ? SunIcon : MoonIcon
 
   const onMenuItemClick = useCallback(
-    (e: React.MouseEvent) => { // Explicitly define event type
-      e.stopPropagation();
+    (e: React.MouseEvent) => {
+      // Explicitly define event type
+      e.stopPropagation()
       if (isMobile) {
-        toggleOpen();
+        toggleOpen()
       }
     },
     [isMobile, toggleOpen]
-  );
+  )
 
-  const scrollDirection = useScrollDirection();
+  const scrollDirection = useScrollDirection()
 
   return (
     <>
@@ -77,16 +78,18 @@ const Navigation = () => {
         maxWidth={{ base: '100%', sm: '100%', lg: '50%', xl: '60%' }}
         className={styles.menu}
         right={{
-          lg: !isMobile && scrollDirection === ScrollDirection.Down
-            ? '2%'
-            : '3.5%',
+          lg:
+            !isMobile && scrollDirection === ScrollDirection.Down
+              ? '2%'
+              : '3.5%',
         }}
         initial="hide"
         animate={(!isMobile || isOpen) && 'show'}
         style={{
-          width: !isMobile && scrollDirection === ScrollDirection.Down
-            ? '12%'
-            : '100%',
+          width:
+            !isMobile && scrollDirection === ScrollDirection.Down
+              ? '12%'
+              : '100%',
           top: !isOpen && isMobile ? '-100vh' : undefined,
           opacity: !isOpen && isMobile ? 0 : undefined,
           left: isOpen && isMobile ? 0 : undefined,
@@ -158,7 +161,7 @@ const Navigation = () => {
         </Flex>
       </MotionContainer>
     </>
-  );
-};
+  )
+}
 
-export default memo(Navigation);
+export default memo(Navigation)

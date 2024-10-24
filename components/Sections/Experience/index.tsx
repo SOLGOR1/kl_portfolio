@@ -1,6 +1,6 @@
-import { memo, FC } from 'react';
-import { Heading, Text, Stack } from '@chakra-ui/react';
-import ExperienceTab from './ExperienceTab';
+import { memo, FC } from 'react'
+import { Heading, Text, Stack } from '@chakra-ui/react'
+import ExperienceTab from './ExperienceTab'
 
 // Define the component as a functional component
 const DetailSection: FC = () => (
@@ -23,6 +23,6 @@ const DetailSection: FC = () => (
     {/* Ensure ExperienceTab does not receive unexpected props */}
     <ExperienceTab />
   </Stack>
-);
+)
 
-export default memo(DetailSection);
+export default memo(DetailSection)
