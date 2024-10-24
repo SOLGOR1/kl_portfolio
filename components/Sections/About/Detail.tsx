@@ -17,6 +17,7 @@ import {
   SiIndeed,
   SiCodeigniter,
   SiCheckmarx,
+  SiSolana,
 } from 'react-icons/si'
 import { GiCoffeePot } from 'react-icons/gi'
 import { IoMdOpen } from 'react-icons/io'
@@ -86,7 +87,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             LP Burned
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiCodeigniter} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiSolana} color={emphasis} fontSize="2em" />
             <Tooltip
           label="Every 24 hours, SOL fees are distributed to the top 50 token holders."
           aria-label="We love SOL"
