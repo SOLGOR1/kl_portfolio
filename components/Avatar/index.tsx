@@ -47,7 +47,6 @@ const Avatar = () => {
       marginBottom={{ base: 10, md: 0, lg: 0 }}
       position="relative"
     >
-      {/* Skeleton shown until image is fully loaded */}
       {!isLoaded && (
         <Skeleton
           height="250px"
@@ -56,7 +55,6 @@ const Avatar = () => {
           margin="auto"
         />
       )}
-      {/* Image shown once loaded */}
       <ChkImage
         src={imgAvatar}
         alt="LEEK"
@@ -64,36 +62,20 @@ const Avatar = () => {
         height="250px"
         margin="auto"
         onLoad={() => {
-          setIsLoaded.on() // Mark image as loaded
+          setIsLoaded.on()
           console.log('Image loaded successfully')
         }}
         onError={() => {
           console.error(`Failed to load image: ${imgAvatar}`)
-          // Set a placeholder image path without /public
-          setImgAvatar('/logo.png') // Set your placeholder path
-          setIsLoaded.off() // Handle loading failure
+          setImgAvatar('/logo.png')
+          setIsLoaded.off()
         }}
         style={{
-          display: isLoaded ? 'block' : 'none', // Show image only if loaded
+          display: isLoaded || !imgAvatar ? 'block' : 'none',
           transition: 'opacity 0.3s ease-in-out',
           opacity: isLoaded ? 1 : 0,
         }}
       />
-      {/* Show placeholder image when not loaded */}
-      {!isLoaded && (
-        <ChkImage
-          src="/logo.png" // Set your placeholder image path
-          alt="Placeholder"
-          width="250px"
-          height="250px"
-          margin="auto"
-          style={{
-            display: !isLoaded ? 'block' : 'none',
-            transition: 'opacity 0.3s ease-in-out',
-            opacity: !isLoaded ? 1 : 0,
-          }}
-        />
-      )}
 
       <Text textAlign="center" fontSize="smaller" variant="description">
         Art by{' '}

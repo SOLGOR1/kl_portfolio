@@ -21,11 +21,11 @@ const Navigation = () => {
   const { toggleColorMode, colorMode } = useColorMode()
   const MotionContainer = motion(Container)
   const [isOpen, toggleOpen] = useCycle(false, true)
-  const isMobile = useBreakpointValue(mobileBreakpointsMap) as boolean // Explicitly define as boolean
+  const isMobile = useBreakpointValue(mobileBreakpointsMap) as boolean
   const menuButtonSize = useBreakpointValue({
     base: 'xl',
     md: 'sm',
-  }) as string // Explicitly define as string
+  }) as string
 
   const bg = useColorModeValue(
     'rgba(237, 242, 247, 0.95)',
@@ -40,7 +40,6 @@ const Navigation = () => {
 
   const onMenuItemClick = useCallback(
     (e: React.MouseEvent) => {
-      // Explicitly define event type
       e.stopPropagation()
       if (isMobile) {
         toggleOpen()
@@ -69,7 +68,8 @@ const Navigation = () => {
           onClick={toggleColorMode}
           padding={0}
         />
-        <MobileMenu isDarkMode={IsDark} toggle={toggleOpen} isOpen={isOpen} />
+        {/* Pass isDarkMode prop to MobileMenu */}
+        <MobileMenu isOpen={isOpen} toggle={toggleOpen} isDarkMode={IsDark} />
       </Box>
 
       <MotionContainer
@@ -119,8 +119,6 @@ const Navigation = () => {
           paddingBottom={isMobile ? 10 : '0'}
           onClick={() => isMobile && toggleOpen()}
         >
-          {/* Button components here */}
-          {/* Repeating Button component can be mapped */}
           {['Home', 'Roadmap', 'News', 'Highlights'].map((item) => (
             <Box
               key={item}
@@ -137,7 +135,7 @@ const Navigation = () => {
                 padding={2}
                 marginX={2}
                 as="a"
-                href={`#${item.toLowerCase()}`} // Dynamic href
+                href={`#${item.toLowerCase()}`}
                 rel="noreferrer"
                 onClick={onMenuItemClick}
               >

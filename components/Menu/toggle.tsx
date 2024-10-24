@@ -2,24 +2,28 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Path = (props: any) => (
+// Type for Path component props
+interface PathProps {
+  isDarkMode: boolean
+  [key: string]: any // Allows passing other props
+}
+
+// Path component for drawing the SVG paths
+const Path: React.FC<PathProps> = ({ isDarkMode, ...props }) => (
   <motion.path
     fill="transparent"
     strokeWidth="3"
-    stroke={props?.isDarkMode ? 'hsl(240, 100%, 94%)' : 'hsl(0, 0%, 7%)'}
+    stroke={isDarkMode ? 'hsl(240, 100%, 94%)' : 'hsl(0, 0%, 7%)'}
     strokeLinecap="round"
     {...props}
   />
 )
 
-export const MenuToggle = ({
-  toggle,
-  isDarkMode = false,
-}: {
-  toggle(): void
+// MenuToggle component
+export const MenuToggle: React.FC<{
+  toggle: () => void
   isDarkMode?: boolean
-}) => (
+}> = ({ toggle, isDarkMode = false }) => (
   <button
     onClick={toggle}
     style={{
@@ -58,15 +62,12 @@ export const MenuToggle = ({
   </button>
 )
 
-const MobileMenu = ({
-  isOpen,
-  toggle,
-  isDarkMode = false,
-}: {
+// MobileMenu component
+const MobileMenu: React.FC<{
   isOpen: boolean
+  toggle: () => void
   isDarkMode: boolean
-  toggle(): void
-}) => (
+}> = ({ isOpen, toggle, isDarkMode = false }) => (
   <motion.nav
     initial={false}
     animate={isOpen ? 'open' : 'closed'}
@@ -75,8 +76,7 @@ const MobileMenu = ({
       alignItems: 'center',
     }}
   >
-    {/* <motion.div className="background" variants={sidebar} /> */}
-    <MenuToggle toggle={() => toggle()} isDarkMode={isDarkMode} />
+    <MenuToggle toggle={toggle} isDarkMode={isDarkMode} />
   </motion.nav>
 )
 

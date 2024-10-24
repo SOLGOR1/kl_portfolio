@@ -71,7 +71,7 @@ const FeaturedWorksSection = () => {
 
         <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
-            idx={1}
+            idx={3}
             title="LEEK on Birdeye"
             src="/works/tobira/birdeye.webp"
             description="We are live on Birdeye."
