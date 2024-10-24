@@ -1,8 +1,5 @@
 import { IconType } from 'react-icons'
-import {
-  FaTelegram,
-  FaTwitter,
-} from 'react-icons/fa'
+import { FaTelegram, FaTwitter } from 'react-icons/fa'
 
 type SocialMedia = {
   label: string

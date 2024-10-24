@@ -68,7 +68,6 @@ const FeaturedWorksSection = () => {
             isMobile={isMobile}
           />
         </MotionGridItem>
-        
       </MotionGrid>
     </Stack>
   )

@@ -31,9 +31,7 @@ export const Experiences: {
       dark: '/worked_at_logos/deloitte/1light.png',
     },
     roles: [
-      <>
-      Website and our unbelievably cool LEEK mascot revealed
-      </>,
+      <>Website and our unbelievably cool LEEK mascot revealed</>,
       <>
         Fairlaunch on{' '}
         <Link
@@ -54,8 +52,8 @@ export const Experiences: {
           rel="noreferrer"
         >
           Twitter
-        </Link>
-        {' '}and{' '} 
+        </Link>{' '}
+        and{' '}
         <Link
           aria-label="Telegram"
           href="https://x.com/leekmeme_offic"
@@ -80,12 +78,8 @@ export const Experiences: {
       dark: '/worked_at_logos/scg/2light.png',
     },
     roles: [
-      <>
-        Social media explosion: Memes, Raids, X Spaces
-      </>,
-      <>
-        Listings on major DEXs
-      </>,
+      <>Social media explosion: Memes, Raids, X Spaces</>,
+      <>Listings on major DEXs</>,
       <>
         Exclusive Leek NFT collection drop{' '}
         <Link
@@ -111,18 +105,10 @@ export const Experiences: {
       dark: '/worked_at_logos/ivp/3light.png',
     },
     roles: [
-      <>
-        Staking
-      </>,
-      <>
-        Partnerships
-      </>,
-      <>
-        Mass adoption: Leeks on everyone's lips and in their wallets
-      </>,
-      <>
-        and more...
-      </>,
+      <>Staking</>,
+      <>Partnerships</>,
+      <>Mass adoption: Leeks on everyone's lips and in their wallets</>,
+      <>and more...</>,
     ],
   },
 }

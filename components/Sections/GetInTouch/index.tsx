@@ -1,8 +1,8 @@
-import { memo } from 'react';
-import { Heading, Text, Stack, Link, Icon, Box } from '@chakra-ui/react';
-import { motion, Variants } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { RiHeartPulseFill, RiCopyleftLine, RiGithubFill } from 'react-icons/ri';
+import { memo } from 'react'
+import { Heading, Text, Stack, Link, Icon, Box } from '@chakra-ui/react'
+import { motion, Variants } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { RiHeartPulseFill, RiCopyleftLine, RiGithubFill } from 'react-icons/ri'
 
 const rimuruVariant: Variants = {
   shake: {
@@ -23,10 +23,10 @@ const rimuruVariant: Variants = {
       ease: 'easeInOut',
     },
   },
-};
+}
 
 const GetInTouch = () => {
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView()
   return (
     <Stack
       width={{ base: '99%', lg: '60%', xl: '75%' }}
@@ -55,7 +55,8 @@ const GetInTouch = () => {
       <Text variant="description">
         LEEK is a memecoin, born purely for fun and community hype.
         <br />
-        It has no utility, no inherent value, and no use case—other than bringing laughter to the degenerate masses. 🚀
+        It has no utility, no inherent value, and no use case—other than
+        bringing laughter to the degenerate masses. 🚀
         <br />
         This is not financial advice, and yes, it could absolutely go to zero.
         <br />
@@ -85,7 +86,7 @@ const GetInTouch = () => {
         </Link>
       </Box>
     </Stack>
-  );
-};
+  )
+}
 
-export default memo(GetInTouch);
+export default memo(GetInTouch)

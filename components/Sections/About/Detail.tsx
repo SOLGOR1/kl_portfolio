@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo } from 'react'
 import {
   Heading,
   Text,
@@ -11,23 +11,23 @@ import {
   Tooltip,
   Stack,
   useColorModeValue,
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'
 import {
   SiAdguard,
   SiIndeed,
   SiCodeigniter,
   SiCheckmarx,
   SiSolana,
-} from 'react-icons/si';
-import { GiCoffeePot } from 'react-icons/gi';
-import { IoMdOpen } from 'react-icons/io';
+} from 'react-icons/si'
+import { GiCoffeePot } from 'react-icons/gi'
+import { IoMdOpen } from 'react-icons/io'
 
 type ISkillSetModal = {
-  onOpen(): void;
-};
+  onOpen(): void
+}
 
 const Detail = ({ onOpen }: ISkillSetModal) => {
-  const emphasis = useColorModeValue('teal.500', 'cyan.200');
+  const emphasis = useColorModeValue('teal.500', 'cyan.200')
 
   return (
     <Stack
@@ -48,10 +48,12 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         that green rocket straight to the moon. We're here to bridge the gap
         between crypto chaos and unstoppable fun, backed by based devs and one
         of the freshest communities in Web3.
-        <br /><br />
+        <br />
+        <br />
         This project has been in the works for months, carefully planned to
         disrupt the norm and bring meme culture to a whole new level.
-        <br /><br />
+        <br />
+        <br />
         <Tooltip
           label="Send LEEK to the moon and beyond, fueled by the collective genius of degens like you!"
           aria-label="Tech Debt?"
@@ -61,13 +63,10 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             <b>The mission?</b>
           </Text>
         </Tooltip>
-        <br /><br />
+        <br />
+        <br />
         Here are a few features that are our cup of{' '}
-        <Tooltip
-          label="We never drink Tea!"
-          aria-label="We hate Tea!"
-          hasArrow
-        >
+        <Tooltip label="We never drink Tea!" aria-label="We hate Tea!" hasArrow>
           <Text as="span" variant="emphasis" textDecorationLine="line-through">
             tea
           </Text>
@@ -120,7 +119,8 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             </Tooltip>
           </ListItem>
         </List>
-        <br /><br />
+        <br />
+        <br />
         <Box>
           <Text
             as="button"
@@ -134,7 +134,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         </Box>
       </SimpleGrid>
     </Stack>
-  );
-};
+  )
+}
 
-export default memo(Detail);
+export default memo(Detail)

@@ -119,7 +119,8 @@ const Sidebar = () => {
               healthy, fresh, and financially fit
             </Text>
             <br />
-            like a Leek with a mission. 🌱 Its the meme revolution you've been waiting for!
+            like a Leek with a mission. 🌱 Its the meme revolution you've been
+            waiting for!
           </MotionText>
           <MotionButton
             size="lg"
