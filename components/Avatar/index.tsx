@@ -26,9 +26,6 @@ const Avatar = () => {
     colorMode === 'dark' ? AvatarImages.DarkMode : AvatarImages.LightMode
   )
 
-  // Log the current image URL for debugging
-  console.log('Current Avatar Image:', imgAvatar)
-
   const [isLoaded, setIsLoaded] = useBoolean(false)
 
   useEffect(() => {
@@ -72,12 +69,12 @@ const Avatar = () => {
         }}
         onError={() => {
           console.error(`Failed to load image: ${imgAvatar}`)
-          setIsLoaded.off() // Handle loading failure
           // Set a placeholder image path
-          setImgAvatar('/public/logo.png') // Set your placeholder path
+          setImgAvatar('/logo.png') // Set your placeholder path without /public
+          setIsLoaded.off() // Handle loading failure
         }}
         style={{
-          display: isLoaded ? 'block' : 'none',
+          display: isLoaded || !imgAvatar ? 'block' : 'none', // Show placeholder if not loaded
           transition: 'opacity 0.3s ease-in-out',
           opacity: isLoaded ? 1 : 0,
         }}
