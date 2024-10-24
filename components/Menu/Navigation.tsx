@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react'
+import { memo, useCallback } from 'react';
 import {
   Container,
   Button,
@@ -8,45 +8,47 @@ import {
   useColorMode,
   useColorModeValue,
   useBreakpointValue,
-} from '@chakra-ui/react'
-import { MoonIcon, SunIcon } from '@chakra-ui/icons'
-import { motion, useCycle } from 'framer-motion'
-import styles from './styles.module.css'
-import MobileMenu from './toggle'
-import { ThemeMode, mobileBreakpointsMap } from 'config/theme'
-import { easing, menuAnim } from 'config/animations'
-import useScrollDirection, { ScrollDirection } from 'hooks/useScrollDirection'
+} from '@chakra-ui/react';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { motion, useCycle } from 'framer-motion';
+import styles from './styles.module.css';
+import MobileMenu from './toggle';
+import { ThemeMode, mobileBreakpointsMap } from 'config/theme';
+import { easing, menuAnim } from 'config/animations';
+import useScrollDirection, { ScrollDirection } from 'hooks/useScrollDirection';
 
 const Navigation = () => {
-  const { toggleColorMode, colorMode } = useColorMode()
-  const MotionContainer = motion(Container)
-  const [isOpen, toggleOpen] = useCycle(false, true)
-  const isMobile = useBreakpointValue(mobileBreakpointsMap)
+  const { toggleColorMode, colorMode } = useColorMode();
+  const MotionContainer = motion(Container);
+  const [isOpen, toggleOpen] = useCycle(false, true);
+  const isMobile = useBreakpointValue(mobileBreakpointsMap) as boolean; // Explicitly define as boolean
   const menuButtonSize = useBreakpointValue({
     base: 'xl',
     md: 'sm',
-  })
+  }) as string; // Explicitly define as string
 
   const bg = useColorModeValue(
     'rgba(237, 242, 247, 0.95)',
     'rgba(18, 18, 18, 0.9)'
-  )
+  );
 
-  const borderColor = useColorModeValue('teal.500', 'cyan.200')
+  const borderColor = useColorModeValue('teal.500', 'cyan.200');
 
-  const IsDark = colorMode === ThemeMode.Dark
-  const btnClassName = `${styles.blogBtn} ${!IsDark && styles.dark}`
-  const Icon = IsDark ? SunIcon : MoonIcon
+  const IsDark = colorMode === ThemeMode.Dark;
+  const btnClassName = `${styles.blogBtn} ${!IsDark && styles.dark}`;
+  const Icon = IsDark ? SunIcon : MoonIcon;
+
   const onMenuItemClick = useCallback(
-    (e) => {
-      e.stopPropagation()
+    (e: React.MouseEvent) => { // Explicitly define event type
+      e.stopPropagation();
       if (isMobile) {
-        toggleOpen()
+        toggleOpen();
       }
     },
     [isMobile, toggleOpen]
-  )
-  const scrollDirection = useScrollDirection()
+  );
+
+  const scrollDirection = useScrollDirection();
 
   return (
     <>
@@ -75,25 +77,23 @@ const Navigation = () => {
         maxWidth={{ base: '100%', sm: '100%', lg: '50%', xl: '60%' }}
         className={styles.menu}
         right={{
-          lg:
-            !isMobile && scrollDirection === ScrollDirection.Down
-              ? '2%'
-              : '3.5%',
+          lg: !isMobile && scrollDirection === ScrollDirection.Down
+            ? '2%'
+            : '3.5%',
         }}
         initial="hide"
         animate={(!isMobile || isOpen) && 'show'}
         style={{
-          width:
-            !isMobile && scrollDirection === ScrollDirection.Down
-              ? '12%'
-              : '100%',
-          top: !isOpen && isMobile && '-100vh',
-          opacity: !isOpen && isMobile && '0',
-          left: isOpen && isMobile && 0,
+          width: !isMobile && scrollDirection === ScrollDirection.Down
+            ? '12%'
+            : '100%',
+          top: !isOpen && isMobile ? '-100vh' : undefined,
+          opacity: !isOpen && isMobile ? 0 : undefined,
+          left: isOpen && isMobile ? 0 : undefined,
         }}
-        borderColor={isOpen && isMobile && borderColor}
-        borderBottomWidth={isOpen && isMobile && '1px'}
-        paddingBottom={isOpen && isMobile && '1px'}
+        borderColor={isOpen && isMobile ? borderColor : undefined}
+        borderBottomWidth={isOpen && isMobile ? '1px' : undefined}
+        paddingBottom={isOpen && isMobile ? '1px' : undefined}
         ease={easing}
         variants={menuAnim}
         marginTop={0}
@@ -116,89 +116,33 @@ const Navigation = () => {
           paddingBottom={isMobile ? 10 : '0'}
           onClick={() => isMobile && toggleOpen()}
         >
-          <Box
-            width={{ base: '100%', lg: 'auto' }}
-            textAlign={{ base: 'center', lg: 'left' }}
-          >
-            <Button
-              fontWeight="light"
-              variant="ghost"
-              fontSize={menuButtonSize}
-              letterSpacing={2}
-              className={btnClassName}
-              padding={2}
-              marginX={2}
-              as="a"
-              href={isMobile ? '#aboutMe' : '#'}
-              rel="noreferrer"
-              onClick={onMenuItemClick}
+          {/* Button components here */}
+          {/* Repeating Button component can be mapped */}
+          {['Home', 'Roadmap', 'News', 'Highlights'].map((item) => (
+            <Box
+              key={item}
+              width={{ base: '100%', lg: 'auto' }}
+              textAlign={{ base: 'center', lg: 'left' }}
+              marginY={{ base: 2, lg: 0 }}
             >
-              Home
-            </Button>
-          </Box>
-          <Box
-            width={{ base: '100%', lg: 'auto' }}
-            textAlign={{ base: 'center', lg: 'left' }}
-            marginY={{ base: 2, lg: 0 }}
-          >
-            <Button
-              fontWeight="light"
-              variant="ghost"
-              fontSize={menuButtonSize}
-              letterSpacing={2}
-              className={btnClassName}
-              padding={2}
-              marginX={2}
-              as="a"
-              href="#jobs"
-              rel="noreferrer"
-              onClick={onMenuItemClick}
-            >
-              Roadmap
-            </Button>
-          </Box>
-          <Box
-            width={{ base: '100%', lg: 'auto' }}
-            textAlign={{ base: 'center', lg: 'left' }}
-            marginY={{ base: 2, lg: 0 }}
-          >
-            <Button
-              fontWeight="light"
-              variant="ghost"
-              fontSize={menuButtonSize}
-              letterSpacing={2}
-              className={btnClassName}
-              padding={2}
-              marginX={2}
-              as="a"
-              href="#works"
-              rel="noreferrer"
-              onClick={onMenuItemClick}
-            >
-              News
-            </Button>
-          </Box>
-          <Box
-            width={{ base: '100%', lg: 'auto' }}
-            textAlign={{ base: 'center', lg: 'left' }}
-            marginY={{ base: 2, lg: 0 }}
-          >
-            <Button
-              fontWeight="light"
-              variant="ghost"
-              fontSize={menuButtonSize}
-              letterSpacing={2}
-              className={btnClassName}
-              padding={2}
-              marginX={2}
-              as="a"
-              href="#contact"
-              rel="noreferrer"
-              onClick={onMenuItemClick}
-            >
-              Highlights
-            </Button>
-          </Box>
+              <Button
+                fontWeight="light"
+                variant="ghost"
+                fontSize={menuButtonSize}
+                letterSpacing={2}
+                className={btnClassName}
+                padding={2}
+                marginX={2}
+                as="a"
+                href={`#${item.toLowerCase()}`} // Dynamic href
+                rel="noreferrer"
+                onClick={onMenuItemClick}
+              >
+                {item}
+              </Button>
+            </Box>
+          ))}
+
           {!isMobile && (
             <Box>
               <IconButton
@@ -214,7 +158,7 @@ const Navigation = () => {
         </Flex>
       </MotionContainer>
     </>
-  )
-}
+  );
+};
 
-export default memo(Navigation)
+export default memo(Navigation);
