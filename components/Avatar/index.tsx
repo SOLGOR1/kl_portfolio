@@ -6,37 +6,41 @@ import {
   Skeleton,
   useBoolean,
   useColorMode,
-} from '@chakra-ui/react'
-import { useEffect } from 'react'
+} from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
 
 const AvatarImages = {
   DarkMode: '/KL_avatar.png',
   LightMode: '/KL_avatar_light.png',
-}
+};
 
 const Avatar = () => {
-  const { colorMode, setColorMode } = useColorMode()
-
+  const { colorMode, setColorMode } = useColorMode();
+  
   // Set initial mode to dark on mount
   useEffect(() => {
-    setColorMode('dark')
-  }, [setColorMode])
+    setColorMode('dark');
+  }, [setColorMode]);
 
-  const imgAvatar =
-    colorMode === 'dark' ? AvatarImages.DarkMode : AvatarImages.LightMode // Removed semicolon and formatted
+  const [imgAvatar, setImgAvatar] = useState(
+    colorMode === 'dark' ? AvatarImages.DarkMode : AvatarImages.LightMode
+  );
 
-  const [isLoaded, setIsLoaded] = useBoolean(false)
+  // Log the current image URL for debugging
+  console.log('Current Avatar Image:', imgAvatar);
+
+  const [isLoaded, setIsLoaded] = useBoolean(false);
 
   useEffect(() => {
     const preloadImages = (src: string) => {
-      const img = new Image()
-      img.src = src
-    }
+      const img = new Image();
+      img.src = src;
+    };
 
     // Preload images for dark and light mode
-    preloadImages(AvatarImages.DarkMode)
-    preloadImages(AvatarImages.LightMode)
-  }, [])
+    preloadImages(AvatarImages.DarkMode);
+    preloadImages(AvatarImages.LightMode);
+  }, []);
 
   return (
     <Box
@@ -63,11 +67,14 @@ const Avatar = () => {
         height="250px"
         margin="auto"
         onLoad={() => {
-          setIsLoaded.on() // Mark image as loaded
+          setIsLoaded.on(); // Mark image as loaded
+          console.log('Image loaded successfully');
         }}
         onError={() => {
-          console.error(`Failed to load image: ${imgAvatar}`)
-          setIsLoaded.off() // Optionally handle loading failure
+          console.error(`Failed to load image: ${imgAvatar}`);
+          setIsLoaded.off(); // Handle loading failure
+          // Set a placeholder image path
+          setImgAvatar('/public/logo.png'); // Set your placeholder path
         }}
         style={{
           display: isLoaded ? 'block' : 'none',
@@ -88,7 +95,7 @@ const Avatar = () => {
         </Link>
       </Text>
     </Box>
-  )
-}
+  );
+};
 
-export default Avatar
+export default Avatar;
