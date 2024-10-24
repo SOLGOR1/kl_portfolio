@@ -10,8 +10,8 @@ import {
 import { useEffect, useState } from 'react'
 
 const AvatarImages = {
-  DarkMode: '/KL_avatar.png',
-  LightMode: '/KL_avatar_light.png',
+  DarkMode: '/public/KL_avatar.png',
+  LightMode: '/public/KL_avatar_light.png',
 }
 
 const Avatar = () => {
