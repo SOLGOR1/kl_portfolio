@@ -2,6 +2,7 @@ import { memo, FC } from 'react';
 import { Heading, Text, Stack } from '@chakra-ui/react';
 import ExperienceTab from './ExperienceTab';
 
+// Define the component as a functional component
 const DetailSection: FC = () => (
   <Stack
     width={{ base: '99%', lg: '60%', xl: '75%' }}
@@ -10,9 +11,7 @@ const DetailSection: FC = () => (
   >
     <Heading
       size="2xl"
-      style={{
-        fontVariantCaps: 'small-caps',
-      }}
+      textTransform="uppercase" // Use Chakra UI's textTransform instead of inline style
     >
       Roadmap
     </Heading>
@@ -21,6 +20,7 @@ const DetailSection: FC = () => (
       full stalk ahead.
     </Text>
 
+    {/* Ensure ExperienceTab does not receive unexpected props */}
     <ExperienceTab />
   </Stack>
 );

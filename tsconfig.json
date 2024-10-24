@@ -18,15 +18,20 @@
     "paths": {
       "@/*": ["*"]
     },
-    "typeRoots": ["./node_modules/@types", "./"]
+    "typeRoots": ["./node_modules/@types", "./types"]  // Adjust if you have custom types
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts", 
+    "**/*.ts", 
+    "**/*.tsx", 
+    "components/**/*.ts", 
+    "config/**/*.ts", 
+    "hooks/**/*.ts", 
+    "pages/**/*.ts", 
+    "public/**/*.ts", 
+    "styles/**/*.ts"
+  ],
   "exclude": [
-    "node_modules",
-    "components",
-    "config",
-    "hooks",
-    "public",
-    "pages"
+    "node_modules"
   ]
 }
