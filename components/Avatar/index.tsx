@@ -30,7 +30,6 @@ const Avatar = () => {
 
   useEffect(() => {
     const preloadImages = (src: string) => {
-      // Typ für src hinzugefügt
       const img = new Image()
       img.src = src
       img.onload = () => {
