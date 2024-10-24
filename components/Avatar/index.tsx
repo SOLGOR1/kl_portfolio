@@ -4,7 +4,6 @@ import {
   Text,
   Link,
   Skeleton,
-  useColorModeValue,
 } from '@chakra-ui/react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect } from 'react'
@@ -15,18 +14,12 @@ const AvatarImages = {
   LightMode: '/KL_avatar_light.png',
 }
 
-declare global {
-  interface Window {
-    preloadedPictures?: HTMLImageElement[]
-  }
-}
+// Default to LightMode; you can adjust this based on your theme
+const isDarkMode = false; // Replace with your logic to check if dark mode is enabled
 
 const Avatar = () => {
   const MotionBox = motion(Box)
-  const imgAvatar = useColorModeValue(
-    AvatarImages.LightMode,
-    AvatarImages.DarkMode
-  )
+  const imgAvatar = isDarkMode ? AvatarImages.DarkMode : AvatarImages.LightMode
 
   useEffect(() => {
     // Preloading and caching images
