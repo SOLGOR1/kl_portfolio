@@ -69,16 +69,31 @@ const Avatar = () => {
         }}
         onError={() => {
           console.error(`Failed to load image: ${imgAvatar}`)
-          // Set a placeholder image path
-          setImgAvatar('/logo.png') // Set your placeholder path without /public
+          // Set a placeholder image path without /public
+          setImgAvatar('/logo.png') // Set your placeholder path
           setIsLoaded.off() // Handle loading failure
         }}
         style={{
-          display: isLoaded || !imgAvatar ? 'block' : 'none', // Show placeholder if not loaded
+          display: isLoaded ? 'block' : 'none', // Show image only if loaded
           transition: 'opacity 0.3s ease-in-out',
           opacity: isLoaded ? 1 : 0,
         }}
       />
+      {/* Show placeholder image when not loaded */}
+      {!isLoaded && (
+        <ChkImage
+          src="/logo.png" // Set your placeholder image path
+          alt="Placeholder"
+          width="250px"
+          height="250px"
+          margin="auto"
+          style={{
+            display: !isLoaded ? 'block' : 'none',
+            transition: 'opacity 0.3s ease-in-out',
+            opacity: !isLoaded ? 1 : 0,
+          }}
+        />
+      )}
 
       <Text textAlign="center" fontSize="smaller" variant="description">
         Art by{' '}
