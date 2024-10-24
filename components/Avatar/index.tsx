@@ -16,19 +16,18 @@ const AvatarImages = {
 const Avatar = () => {
   const { colorMode } = useColorMode()
 
-  const [imgAvatar, setImgAvatar] = useState(
-    colorMode === 'dark' ? AvatarImages.DarkMode : AvatarImages.LightMode
-  )
-
+  // Use default avatar image to avoid blank loading screen
+  const [imgAvatar, setImgAvatar] = useState(AvatarImages.DarkMode)
   const [isLoaded, setIsLoaded] = useState(false)
 
-  // Update the avatar image when colorMode changes
+  // Update image based on color mode
   useEffect(() => {
     setImgAvatar(
       colorMode === 'dark' ? AvatarImages.DarkMode : AvatarImages.LightMode
     )
   }, [colorMode])
 
+  // Preload both images
   useEffect(() => {
     const preloadImages = (src: string) => {
       const img = new Image()
@@ -70,12 +69,12 @@ const Avatar = () => {
         margin="auto"
         onLoad={() => {
           console.log('Image loaded successfully')
-          setIsLoaded(true) // Set loading to false
+          setIsLoaded(true) // Set loading to false once the image is loaded
         }}
         style={{
           display: isLoaded ? 'block' : 'none', // Show image when loaded
           transition: 'opacity 0.3s ease-in-out',
-          opacity: isLoaded ? 1 : 0, // Fade-in effect
+          opacity: isLoaded ? 1 : 0, // Fade-in effect when loaded
         }}
       />
       <Text textAlign="center" fontSize="smaller" variant="description">
