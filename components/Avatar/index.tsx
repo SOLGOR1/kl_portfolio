@@ -7,7 +7,7 @@ import {
   useBoolean,
   useColorMode,
 } from '@chakra-ui/react';
-import { useEffect } from 'react'; // Correctly import useEffect from React
+import { useEffect } from 'react';
 
 const AvatarImages = {
   DarkMode: '/KL_avatar.png',
@@ -22,7 +22,11 @@ const Avatar = () => {
     setColorMode('dark');
   }, [setColorMode]);
 
-  const imgAvatar = colorMode === 'dark' ? AvatarImages.DarkMode : AvatarImages.LightMode;
+  const imgAvatar =
+    colorMode === 'dark'
+      ? AvatarImages.DarkMode
+      : AvatarImages.LightMode; // Removed semicolon and formatted
+
   const [isLoaded, setIsLoaded] = useBoolean(false);
 
   useEffect(() => {
@@ -42,7 +46,7 @@ const Avatar = () => {
       boxSize={{ base: 64, lg: 'sm' }}
       padding={{ base: 8 }}
       marginBottom={{ base: 10, md: 0, lg: 0 }}
-      position="relative" // Ensure position for children
+      position="relative"
     >
       {/* Skeleton shown until image is fully loaded */}
       {!isLoaded && (
@@ -64,13 +68,13 @@ const Avatar = () => {
           setIsLoaded.on(); // Mark image as loaded
         }}
         onError={() => {
-          console.error(`Failed to load image: ${imgAvatar}`); // Log any errors
+          console.error(`Failed to load image: ${imgAvatar}`);
           setIsLoaded.off(); // Optionally handle loading failure
         }}
         style={{
-          display: isLoaded ? 'block' : 'none', // Show image only when loaded
-          transition: 'opacity 0.3s ease-in-out', // Add transition for opacity
-          opacity: isLoaded ? 1 : 0, // Ensure opacity changes with loading state
+          display: isLoaded ? 'block' : 'none',
+          transition: 'opacity 0.3s ease-in-out',
+          opacity: isLoaded ? 1 : 0,
         }}
       />
 
@@ -79,7 +83,7 @@ const Avatar = () => {
         <Link
           href="https://x.com/leekmeme_offic"
           target="_blank"
-          aria-label="KojiroArt"
+          aria-label="LEEK"
           rel="noreferrer"
         >
           LEEK
