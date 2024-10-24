@@ -85,6 +85,18 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             <ListIcon as={SiCodeigniter} color={emphasis} fontSize="2em" />
             LP Burned
           </ListItem>
+          <ListItem fontSize="small" display="flex" alignItems="center">
+            <ListIcon as={SiCodeigniter} color={emphasis} fontSize="2em" />
+            <Tooltip
+          label="Every 24 hours, SOL fees are distributed to the top 50 token holders."
+          aria-label="We love SOL"
+          hasArrow
+        >
+          <Text as="span" variant="emphasis">
+            HODL Rewards
+          </Text>
+        </Tooltip>
+          </ListItem>
         </List>
         <List spacing={3}>
         <ListItem fontSize="small" display="flex" alignItems="center">
@@ -102,7 +114,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
           aria-label="We love Burns"
           hasArrow
         >
-          <Text as="span" variant="emphasis" textDecorationLine="line-through">
+          <Text as="span" variant="emphasis">
             Burn Mechanism
           </Text>
         </Tooltip>
