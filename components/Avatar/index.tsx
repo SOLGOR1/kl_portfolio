@@ -58,9 +58,9 @@ const Avatar = () => {
           height="250"
           margin="auto"
           fallback={
-            <Skeleton 
-              height="250px" 
-              width="250px" 
+            <Skeleton
+              height="250px"
+              width="250px"
               borderRadius="full" // Make it circular
             />
           }
