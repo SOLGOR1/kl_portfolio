@@ -10,8 +10,8 @@ import {
 import { useEffect, useState } from 'react'
 
 const AvatarImages = {
-  DarkMode: '/KL_avatar.png', // Corrected path
-  LightMode: '/KL_avatar_light.png', // Corrected path
+  DarkMode: '/KL_avatar.png',
+  LightMode: '/KL_avatar_light.png',
 }
 
 const Avatar = () => {
@@ -68,21 +68,20 @@ const Avatar = () => {
         height="250px"
         margin="auto"
         onLoad={() => {
-          setIsLoaded.on()
           console.log('Image loaded successfully')
+          setIsLoaded.on()
         }}
         onError={() => {
           console.error(`Failed to load image: ${imgAvatar}`)
           setImgAvatar('/logo.png') // Fallback image
-          setIsLoaded.off() // Image failed to load, so keep loading state
+          setIsLoaded.off() // Keep loading state
         }}
         style={{
-          display: isLoaded ? 'block' : 'none',
+          display: isLoaded ? 'block' : 'none', // Show image when loaded
           transition: 'opacity 0.3s ease-in-out',
-          opacity: isLoaded ? 1 : 0,
+          opacity: isLoaded ? 1 : 0, // Fade-in effect
         }}
       />
-
       <Text textAlign="center" fontSize="smaller" variant="description">
         Art by{' '}
         <Link
