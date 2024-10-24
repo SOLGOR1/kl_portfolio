@@ -21,11 +21,11 @@ const Avatar = () => {
     setColorMode('dark')
   }, [setColorMode])
 
-  const [imgAvatar, setImgAvatar] = useState(
-    colorMode === 'dark' ? AvatarImages.DarkMode : AvatarImages.LightMode
-  )
-
   const [isLoaded, setIsLoaded] = useState(false)
+
+  // Set the initial avatar based on the color mode
+  const imgAvatar =
+    colorMode === 'dark' ? AvatarImages.DarkMode : AvatarImages.LightMode
 
   useEffect(() => {
     const preloadImages = (src: string) => {
