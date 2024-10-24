@@ -20,6 +20,7 @@ import {
   scaleUp,
 } from 'config/animations'
 import { SocialMedias } from 'config/sidebar'
+
 const Sidebar = () => {
   const { colorMode } = useColorMode()
   const display = useBreakpointValue({ base: 'none', lg: 'block' })
@@ -54,7 +55,7 @@ const Sidebar = () => {
         display={{ xl: 'flex' }}
         alignItems={{ xl: 'center' }}
       >
-        <MotionStack variants={stagger} spacing={6} w="100">
+        <MotionStack variants={stagger} spacing={6} w="100%">
           <MotionText
             variants={fadeInUp}
             delay={1}
@@ -111,13 +112,14 @@ const Sidebar = () => {
             maxWidth={{ base: '100%', lg: '80%' }}
           >
             Why Leek?
-            <br></br>
+            <br />
             Because nothing says
             <Text variant="emphasis" as="span">
               {' '}
               healthy, fresh, and financially fit
             </Text>
-            <br />like a Leek with a mission. 🌱 Its the meme revolution youve been waiting for!
+            <br />
+            like a Leek with a mission. 🌱 Its the meme revolution you've been waiting for!
           </MotionText>
           <MotionButton
             size="lg"

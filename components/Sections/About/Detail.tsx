@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import { memo } from 'react';
 import {
   Heading,
   Text,
@@ -11,25 +11,25 @@ import {
   Tooltip,
   Stack,
   useColorModeValue,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 import {
   SiAdguard,
   SiIndeed,
   SiCodeigniter,
   SiCheckmarx,
   SiSolana,
-} from 'react-icons/si'
-import { GiCoffeePot } from 'react-icons/gi'
-import { IoMdOpen } from 'react-icons/io'
+} from 'react-icons/si';
+import { GiCoffeePot } from 'react-icons/gi';
+import { IoMdOpen } from 'react-icons/io';
 
 type ISkillSetModal = {
-  onOpen(): void
-}
+  onOpen(): void;
+};
 
 const Detail = ({ onOpen }: ISkillSetModal) => {
-  const emphasis = useColorModeValue('teal.500', 'cyan.200')
-  const currentYear = new Date().getFullYear()
-  const professionalYears = currentYear - 2016
+  const emphasis = useColorModeValue('teal.500', 'cyan.200');
+  const currentYear = new Date().getFullYear();
+  const professionalYears = currentYear - 2016; // Example usage
 
   return (
     <Stack
@@ -41,17 +41,15 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         as="h4"
         size="2xl"
         letterSpacing={1.8}
-        style={{
-          fontVariantCaps: 'small-caps',
-        }}
+        style={{ fontVariantCaps: 'small-caps' }}
       >
         Our Vision
       </Heading>
       <Text variant="description">
-        LEEK is a memecoin on a mission to <b>unite the degens</b> and shoot that green rocket straight to the moon. 
-        Were here to bridge the gap between crypto chaos and unstoppable fun, backed by based devs and one of the freshest communities in Web3.
+        LEEK is a memecoin on a mission to <b>unite the degens</b> and shoot that green rocket straight to the moon.
+        We're here to bridge the gap between crypto chaos and unstoppable fun, backed by based devs and one of the freshest communities in Web3.
         <br /><br />
-        This project has been in the works for months, carefully planned to disrupt the norm and bring meme culture to a whole new level. 
+        This project has been in the works for months, carefully planned to disrupt the norm and bring meme culture to a whole new level.
         <br /><br />
         <Tooltip
           label="Send LEEK to the moon and beyond, fueled by the collective genius of degens like you!"
@@ -63,7 +61,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
           </Text>
         </Tooltip>{' '}
         <br /> <br />
-        Here are few features that are cup of our{' '}
+        Here are few features that are our cup of{' '}
         <Tooltip
           label="We never drink Tea!"
           aria-label="We hate Tea!"
@@ -89,18 +87,18 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
           <ListItem fontSize="small" display="flex" alignItems="center">
             <ListIcon as={SiSolana} color={emphasis} fontSize="2em" />
             <Tooltip
-          label="Every 24 hours, SOL fees are distributed to the top 50 token holders."
-          aria-label="We love SOL"
-          hasArrow
-        >
-          <Text as="span" variant="emphasis">
-            HODL Rewards
-          </Text>
-        </Tooltip>
+              label="Every 24 hours, SOL fees are distributed to the top 50 token holders."
+              aria-label="We love SOL"
+              hasArrow
+            >
+              <Text as="span" variant="emphasis">
+                HODL Rewards
+              </Text>
+            </Tooltip>
           </ListItem>
         </List>
         <List spacing={3}>
-        <ListItem fontSize="small" display="flex" alignItems="center">
+          <ListItem fontSize="small" display="flex" alignItems="center">
             <ListIcon as={SiCheckmarx} color={emphasis} fontSize="2em" />
             Mint Authority Revoked
           </ListItem>
@@ -111,14 +109,14 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
           <ListItem fontSize="small" display="flex" alignItems="center">
             <ListIcon as={SiCodeigniter} color={emphasis} fontSize="2em" />
             <Tooltip
-          label="Every 24 hours, LEEK fees are burned, gradually reducing the total supply."
-          aria-label="We love Burns"
-          hasArrow
-        >
-          <Text as="span" variant="emphasis">
-            Burn Mechanism
-          </Text>
-        </Tooltip>
+              label="Every 24 hours, LEEK fees are burned, gradually reducing the total supply."
+              aria-label="We love Burns"
+              hasArrow
+            >
+              <Text as="span" variant="emphasis">
+                Burn Mechanism
+              </Text>
+            </Tooltip>
           </ListItem>
         </List>
         <br /> <br />
@@ -135,7 +133,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         </Box>
       </SimpleGrid>
     </Stack>
-  )
-}
+  );
+};
 
-export default memo(Detail)
+export default memo(Detail);

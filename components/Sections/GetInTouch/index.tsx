@@ -1,8 +1,9 @@
-import { memo } from 'react'
-import { Heading, Text, Stack, Link, Icon, Box } from '@chakra-ui/react'
-import { motion, Variants } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-import { RiHeartPulseFill, RiCopyleftLine, RiGithubFill } from 'react-icons/ri'
+import { memo } from 'react';
+import { Heading, Text, Stack, Link, Icon, Box } from '@chakra-ui/react';
+import { motion, Variants } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { RiHeartPulseFill, RiCopyleftLine, RiGithubFill } from 'react-icons/ri';
+
 const rimuruVariant: Variants = {
   shake: {
     rotate: [0, 15, 0, -15, 0],
@@ -22,10 +23,10 @@ const rimuruVariant: Variants = {
       ease: 'easeInOut',
     },
   },
-}
+};
 
 const GetInTouch = () => {
-  const [ref, inView] = useInView()
+  const [ref, inView] = useInView();
   return (
     <Stack
       width={{ base: '99%', lg: '60%', xl: '75%' }}
@@ -52,18 +53,17 @@ const GetInTouch = () => {
         </Text>
       </Heading>
       <Text variant="description">
-      LEEK is a memecoin, born purely for fun and community hype. 
-      <br></br>
-      It has no utility, no inherent value, and no use case—other than bringing laughter to the degenerate masses. 🚀
-      <br></br>
-      This is not financial advice, and yes, it could absolutely go to zero. 
-      <br></br>
-      So, only toss in what you’re willing to lose.
-      <br></br>
-      Degens unite, but always DYOR!{' '}
+        LEEK is a memecoin, born purely for fun and community hype.
+        <br />
+        It has no utility, no inherent value, and no use case—other than bringing laughter to the degenerate masses. 🚀
+        <br />
+        This is not financial advice, and yes, it could absolutely go to zero.
+        <br />
+        So, only toss in what you’re willing to lose.
+        <br />
+        Degens unite, but always DYOR!{' '}
       </Text>
       <Box
-        spacing={0.5}
         textAlign="center"
         fontFamily="monospace"
         paddingTop={{ base: 10, lg: 20, xl: 20 }}
@@ -85,7 +85,7 @@ const GetInTouch = () => {
         </Link>
       </Box>
     </Stack>
-  )
-}
+  );
+};
 
-export default memo(GetInTouch)
+export default memo(GetInTouch);

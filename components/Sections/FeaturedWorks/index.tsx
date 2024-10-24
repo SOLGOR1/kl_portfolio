@@ -11,11 +11,13 @@ import { motion } from 'framer-motion'
 import FeaturedCard from './FeaturedCard'
 import { fadeInUpSlower, galleryStagger } from 'config/animations'
 import { mobileBreakpointsMap } from 'config/theme'
+
 const MotionGrid = motion(Grid)
 const MotionGridItem = motion(GridItem)
 
 const FeaturedWorksSection = () => {
   const isMobile = useBreakpointValue(mobileBreakpointsMap)
+
   return (
     <Stack
       width={{ base: '99%', lg: '60%', xl: '75%' }}
@@ -28,10 +30,12 @@ const FeaturedWorksSection = () => {
           fontVariantCaps: 'small-caps',
         }}
       >
-      📰 LEEK News
+        📰 LEEK News
       </Heading>
       <Text variant="description">
-      Welcome to the LEEK News Hub, where you’ll find all the freshest updates, spicy announcements, and major happenings in the world of degens.
+        Welcome to the LEEK News Hub, where you’ll find all the freshest
+        updates, spicy announcements, and major happenings in the world of
+        degens.
       </Text>
 
       <MotionGrid

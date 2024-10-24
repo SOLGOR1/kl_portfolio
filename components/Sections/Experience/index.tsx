@@ -1,6 +1,7 @@
 import { memo } from 'react'
-import { Heading, Text, Stack, Link } from '@chakra-ui/react'
+import { Heading, Text, Stack } from '@chakra-ui/react'
 import ExperienceTab from './ExperienceTab'
+
 const DetailSection = () => (
   <Stack
     width={{ base: '99%', lg: '60%', xl: '75%' }}
@@ -16,7 +17,8 @@ const DetailSection = () => (
       Roadmap
     </Heading>
     <Text variant="description">
-    Ready to watch a vegetable conquer the crypto space? Hop in, and let’s go full stalk ahead.{' '}
+      Ready to watch a vegetable conquer the crypto space? Hop in, and let’s go
+      full stalk ahead.{' '}
     </Text>
 
     <ExperienceTab />
