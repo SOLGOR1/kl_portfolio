@@ -5,38 +5,40 @@ import {
   Link,
   SkeletonCircle,
   useColorModeValue,
-} from '@chakra-ui/react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { useEffect } from 'react'
-import { avatarAnimation } from 'config/animations'
+} from '@chakra-ui/react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect } from 'react';
+import { avatarAnimation } from 'config/animations';
 
 const AvatarImages = {
-  DarkMode: '/KL_avatar.png',
-  LightMode: './KL_avatar_light.png',
-}
+  DarkMode: '/KL_avatar.png', // Ensure this path is correct
+  LightMode: '/KL_avatar_light.png', // Corrected path
+};
 
 declare global {
   interface Window {
-    preloadedPictures?: HTMLImageElement[]
+    preloadedPictures?: HTMLImageElement[];
   }
 }
 
 const Avatar = () => {
-  const MotionBox = motion(Box)
+  const MotionBox = motion(Box);
   const imgAvatar = useColorModeValue(
     AvatarImages.LightMode,
     AvatarImages.DarkMode
-  )
+  );
+
   useEffect(() => {
-    // Some nice preloading and caching
-    const images = [AvatarImages.DarkMode, AvatarImages.LightMode]
+    // Preloading and caching images
+    const images = [AvatarImages.DarkMode, AvatarImages.LightMode];
     const preloadedImages = images.map((imageSrc) => {
-      const img = new Image()
-      img.src = imageSrc
-      return img
-    })
-    window.preloadedPictures = preloadedImages
-  }, [])
+      const img = new Image();
+      img.src = imageSrc;
+      return img;
+    });
+    window.preloadedPictures = preloadedImages;
+  }, []);
+
   return (
     <AnimatePresence>
       <MotionBox
@@ -52,10 +54,10 @@ const Avatar = () => {
         <ChkImage
           src={imgAvatar}
           alt="LEEK"
-          htmlWidth="250"
-          htmlHeight="250"
+          width="250" // Use "width" instead of "htmlWidth"
+          height="250" // Use "height" instead of "htmlHeight"
           margin="auto"
-          fallback={<SkeletonCircle height="100%" width="100%" />}
+          fallback={<SkeletonCircle size="250px" />} // Set size for SkeletonCircle
         />
         <Text textAlign="center" fontSize="smaller" variant="description">
           Art by{' '}
@@ -70,7 +72,7 @@ const Avatar = () => {
         </Text>
       </MotionBox>
     </AnimatePresence>
-  )
-}
+  );
+};
 
-export default Avatar
+export default Avatar;
