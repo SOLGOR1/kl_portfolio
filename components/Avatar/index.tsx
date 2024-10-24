@@ -3,7 +3,7 @@ import {
   Image as ChkImage,
   Text,
   Link,
-  SkeletonCircle,
+  Skeleton,
   useColorModeValue,
 } from '@chakra-ui/react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -57,7 +57,13 @@ const Avatar = () => {
           width="250"
           height="250"
           margin="auto"
-          fallback={<SkeletonCircle size="250px" />}
+          fallback={
+            <Skeleton 
+              height="250px" 
+              width="250px" 
+              borderRadius="full" // Make it circular
+            />
+          }
         />
         <Text textAlign="center" fontSize="smaller" variant="description">
           Art by{' '}
