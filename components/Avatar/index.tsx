@@ -1,10 +1,4 @@
-import {
-  Box,
-  Image as ChkImage,
-  Text,
-  Link,
-  Skeleton,
-} from '@chakra-ui/react'
+import { Box, Image as ChkImage, Text, Link, Skeleton } from '@chakra-ui/react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect } from 'react'
 import { avatarAnimation } from 'config/animations'
