@@ -95,6 +95,18 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             <ListIcon as={SiIndeed} color={emphasis} fontSize="2em" />
             Mutable Info Revoked
           </ListItem>
+          <ListItem fontSize="small" display="flex" alignItems="center">
+            <ListIcon as={SiCodeigniter} color={emphasis} fontSize="2em" />
+            <Tooltip
+          label="Every 24 hours, LEEK fees are burned, gradually reducing the total supply."
+          aria-label="We love Burns"
+          hasArrow
+        >
+          <Text as="span" variant="emphasis" textDecorationLine="line-through">
+            Burn Mechanism
+          </Text>
+        </Tooltip>
+          </ListItem>
         </List>
         <br /> <br />
         <Box>
