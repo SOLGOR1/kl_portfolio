@@ -14,18 +14,20 @@ const AvatarImages = {
 }
 
 const Avatar = () => {
-  const { colorMode, setColorMode } = useColorMode()
+  const { colorMode } = useColorMode()
 
-  // Set initial mode to dark on mount
-  useEffect(() => {
-    setColorMode('dark')
-  }, [setColorMode])
+  const [imgAvatar, setImgAvatar] = useState(
+    colorMode === 'dark' ? AvatarImages.DarkMode : AvatarImages.LightMode
+  )
 
   const [isLoaded, setIsLoaded] = useState(false)
 
-  // Set the initial avatar based on the color mode
-  const imgAvatar =
-    colorMode === 'dark' ? AvatarImages.DarkMode : AvatarImages.LightMode
+  // Update the avatar image when colorMode changes
+  useEffect(() => {
+    setImgAvatar(
+      colorMode === 'dark' ? AvatarImages.DarkMode : AvatarImages.LightMode
+    )
+  }, [colorMode])
 
   useEffect(() => {
     const preloadImages = (src: string) => {
