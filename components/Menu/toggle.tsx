@@ -2,10 +2,12 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
 
-// Type for Path component props
+// Define props for Path component more explicitly
 interface PathProps {
   isDarkMode: boolean
-  [key: string]: any // Allows passing other props
+  d?: string // Define `d` as an optional string, since it's passed in
+  variants?: any // You can specify a more precise type here if known
+  transition?: any // Specify types for transition if known
 }
 
 // Path component for drawing the SVG paths
@@ -66,7 +68,7 @@ export const MenuToggle: React.FC<{
 const MobileMenu: React.FC<{
   isOpen: boolean
   toggle: () => void
-  isDarkMode: boolean
+  isDarkMode?: boolean
 }> = ({ isOpen, toggle, isDarkMode = false }) => (
   <motion.nav
     initial={false}
