@@ -4,7 +4,6 @@ import {
   Text,
   Link,
   Skeleton,
-  useBoolean,
   useColorMode,
 } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
@@ -26,7 +25,7 @@ const Avatar = () => {
     colorMode === 'dark' ? AvatarImages.DarkMode : AvatarImages.LightMode
   )
 
-  const [isLoaded, setIsLoaded] = useBoolean(false)
+  const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
     const preloadImages = (src: string) => {
@@ -69,12 +68,7 @@ const Avatar = () => {
         margin="auto"
         onLoad={() => {
           console.log('Image loaded successfully')
-          setIsLoaded.on()
-        }}
-        onError={() => {
-          console.error(`Failed to load image: ${imgAvatar}`)
-          setImgAvatar('/logo.png') // Fallback image
-          setIsLoaded.off() // Keep loading state
+          setIsLoaded(true) // Set loading to false
         }}
         style={{
           display: isLoaded ? 'block' : 'none', // Show image when loaded
