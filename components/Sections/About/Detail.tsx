@@ -28,7 +28,6 @@ type ISkillSetModal = {
 
 const Detail = ({ onOpen }: ISkillSetModal) => {
   const emphasis = useColorModeValue('teal.500', 'cyan.200');
-  const currentYear = new Date().getFullYear(); // This can be kept or removed if unused
 
   return (
     <Stack
@@ -45,10 +44,13 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         Our Vision
       </Heading>
       <Text variant="description">
-        LEEK is a memecoin on a mission to <b>unite the degens</b> and shoot that green rocket straight to the moon.
-        We're here to bridge the gap between crypto chaos and unstoppable fun, backed by based devs and one of the freshest communities in Web3.
+        LEEK is a memecoin on a mission to <b>unite the degens</b> and shoot
+        that green rocket straight to the moon. We're here to bridge the gap
+        between crypto chaos and unstoppable fun, backed by based devs and one
+        of the freshest communities in Web3.
         <br /><br />
-        This project has been in the works for months, carefully planned to disrupt the norm and bring meme culture to a whole new level.
+        This project has been in the works for months, carefully planned to
+        disrupt the norm and bring meme culture to a whole new level.
         <br /><br />
         <Tooltip
           label="Send LEEK to the moon and beyond, fueled by the collective genius of degens like you!"
@@ -59,7 +61,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             <b>The mission?</b>
           </Text>
         </Tooltip>{' '}
-        <br /> <br />
+        <br /><br />
         Here are few features that are our cup of{' '}
         <Tooltip
           label="We never drink Tea!"
@@ -118,7 +120,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             </Tooltip>
           </ListItem>
         </List>
-        <br /> <br />
+        <br /><br />
         <Box>
           <Text
             as="button"
