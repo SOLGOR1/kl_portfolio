@@ -1,18 +1,18 @@
 import { IconType } from 'react-icons'
 import {
-  SiDotNet,
+  SiDotnet,
   SiJavascript,
   SiTypescript,
-  SiNodeDotJs,
+  SiNodedotjs,            // Updated
   SiGraphql,
   SiApollographql,
   SiPhp,
   SiReact,
-  SiNextDotJs,
+  SiNextdotjs,            // Updated
   SiRedux,
-  SiStyledComponents,
+  SiStyledcomponents,      // Updated
   SiGhost,
-  SiVueDotJs,
+  SiVuedotjs,             // Updated
   SiDocker,
   SiGooglecloud,
   SiCpanel,
@@ -23,11 +23,11 @@ import {
   SiMysql,
   SiMongodb,
   SiRedis,
-  SiSocketDotIo,
-  SiMaterialUi,
+  SiSocketdotio,         // Updated
   SiFramer,
   SiGit,
   SiGnubash,
+  SiMaterialdesign,
   SiVisualstudiocode,
   SiUnity,
   SiMicrosoft,
@@ -60,11 +60,11 @@ export const Skills: {
   backend: [
     {
       name: 'C# - .NET.Core',
-      icon: SiDotNet,
+      icon: SiDotnet,
     },
     {
       name: 'Node',
-      icon: SiNodeDotJs,
+      icon: SiNodedotjs,
     },
     {
       name: 'Javascript (ES6+)',
@@ -90,7 +90,7 @@ export const Skills: {
     },
     {
       name: 'NextJS',
-      icon: SiNextDotJs,
+      icon: SiNextdotjs,
     },
     {
       name: 'Apollo Graphql',
@@ -102,7 +102,7 @@ export const Skills: {
     },
     {
       name: 'VueJS',
-      icon: SiVueDotJs,
+      icon: SiVuedotjs,
     },
     {
       name: 'Ghost',
@@ -132,7 +132,7 @@ export const Skills: {
     },
     {
       name: 'SocketIO',
-      icon: SiSocketDotIo,
+      icon: SiSocketdotio,
     },
     {
       name: 'Google Pubsub',
@@ -168,7 +168,7 @@ export const Skills: {
   'ui frameworks': [
     {
       name: 'Styled Components',
-      icon: SiStyledComponents,
+      icon: SiStyledcomponents,
     },
     {
       name: 'AntDesign',
@@ -176,7 +176,7 @@ export const Skills: {
     },
     {
       name: 'MaterialUI',
-      icon: SiMaterialUi,
+      icon: SiMaterialdesign,
     },
     {
       name: 'Framer Motion',
