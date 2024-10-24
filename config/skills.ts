@@ -3,16 +3,16 @@ import {
   SiDotnet,
   SiJavascript,
   SiTypescript,
-  SiNodedotjs,            // Updated
+  SiNodedotjs, // Updated
   SiGraphql,
   SiApollographql,
   SiPhp,
   SiReact,
-  SiNextdotjs,            // Updated
+  SiNextdotjs, // Updated
   SiRedux,
-  SiStyledcomponents,      // Updated
+  SiStyledcomponents, // Updated
   SiGhost,
-  SiVuedotjs,             // Updated
+  SiVuedotjs, // Updated
   SiDocker,
   SiGooglecloud,
   SiCpanel,
@@ -23,7 +23,7 @@ import {
   SiMysql,
   SiMongodb,
   SiRedis,
-  SiSocketdotio,         // Updated
+  SiSocketdotio, // Updated
   SiFramer,
   SiGit,
   SiGnubash,
