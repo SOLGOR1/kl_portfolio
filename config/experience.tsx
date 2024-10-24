@@ -35,12 +35,12 @@ export const Experiences: {
       <>
         Fairlaunch on{' '}
         <Link
-          aria-label="PumpFun"
-          href="https://pump.fun/"
+          aria-label="Moonshot"
+          href="https://dexscreener.com/moonshot"
           target="_blank"
           rel="noreferrer"
         >
-          Pumpfun.
+          Moonshot.
         </Link>
       </>,
       <>

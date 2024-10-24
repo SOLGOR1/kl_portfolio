@@ -60,14 +60,28 @@ const FeaturedWorksSection = () => {
         <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
             idx={2}
-            title="We are Live!"
-            description="We are live on PumpFun."
-            src="/works/tobira/pumpfun.webp"
+            title="LEEK on Dexscreener"
+            description="We are live on Dexscreener."
+            src="/works/tobira/dexscreener.webp"
             height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://pump.fun"
+            ctaUrl="https://dexscreener.com/"
             isMobile={isMobile}
           />
         </MotionGridItem>
+
+        <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
+          <FeaturedCard
+            idx={1}
+            title="LEEK on Birdeye"
+            src="/works/tobira/birdeye.webp"
+            description="We are live on Birdeye."
+            height={{ base: '130px', md: '225px', '2xl': '300px' }}
+            ctaUrl="https://birdeye.so/"
+            objectPosition="right 20%"
+            isMobile={isMobile}
+          />
+        </MotionGridItem>
+
       </MotionGrid>
     </Stack>
   )

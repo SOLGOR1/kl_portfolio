@@ -65,7 +65,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         </Tooltip>
         <br />
         <br />
-        Here are a few features that are our cup of{' '}
+        Here are a few features that are cup of our{' '}
         <Tooltip label="We never drink Tea!" aria-label="We hate Tea!" hasArrow>
           <Text as="span" variant="emphasis" textDecorationLine="line-through">
             tea
