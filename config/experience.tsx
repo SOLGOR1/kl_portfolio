@@ -36,7 +36,7 @@ export const Experiences: {
         Fairlaunch on{' '}
         <Link
           aria-label="Moonshot"
-          href="https://dexscreener.com/moonshot"
+          href="https://dexscreener.com/solana/fdp3gvvkjzkaklf7dbwls5ar1xengg4spr3lcosgxn58"
           target="_blank"
           rel="noreferrer"
         >
@@ -56,7 +56,7 @@ export const Experiences: {
         and{' '}
         <Link
           aria-label="Telegram"
-          href="https://x.com/leekmeme_offic"
+          href="https://t.me/leek_sol"
           target="_blank"
           rel="noreferrer"
         >

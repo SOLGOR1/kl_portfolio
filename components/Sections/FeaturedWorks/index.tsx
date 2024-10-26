@@ -49,9 +49,9 @@ const FeaturedWorksSection = () => {
             idx={1}
             title="We are Live!"
             src="/works/tobira/moonshot.webp"
-            description="We are live on PumpFun."
+            description="We are live on Moonshot."
             height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://dexscreener.com/moonshot"
+            ctaUrl="https://dexscreener.com/solana/fdp3gvvkjzkaklf7dbwls5ar1xengg4spr3lcosgxn58"
             objectPosition="right 20%"
             isMobile={isMobile}
           />
@@ -64,7 +64,7 @@ const FeaturedWorksSection = () => {
             description="We are live on Dexscreener."
             src="/works/tobira/dexscreener.webp"
             height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://dexscreener.com/"
+            ctaUrl="https://dexscreener.com/solana/fdp3gvvkjzkaklf7dbwls5ar1xengg4spr3lcosgxn58"
             isMobile={isMobile}
           />
         </MotionGridItem>
@@ -76,7 +76,7 @@ const FeaturedWorksSection = () => {
             src="/works/tobira/birdeye.webp"
             description="We are live on Birdeye."
             height={{ base: '130px', md: '225px', '2xl': '300px' }}
-            ctaUrl="https://birdeye.so/"
+            ctaUrl="https://birdeye.so/token/So11111111111111111111111111111111111111112/ECZN5Xjd8Z5ZUikPqCWFNoXTvxpZ7vHYBEJRkZR2kx1V?chain=solana"
             objectPosition="right 20%"
             isMobile={isMobile}
           />
