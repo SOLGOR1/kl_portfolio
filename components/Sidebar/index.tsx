@@ -9,7 +9,6 @@ import {
   Box,
   Icon,
   useBreakpointValue,
-  SimpleGrid,
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import styles from './styles.module.css'
@@ -123,7 +122,7 @@ const Sidebar = () => {
             like a Leek with a mission. 🌱 Its the meme revolution you've been
             waiting for!
           </MotionText>
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>
+
           <MotionButton
             size="lg"
             variant="outline"
@@ -192,7 +191,6 @@ const Sidebar = () => {
           >
             Battle
           </MotionButton>
-          </SimpleGrid>
 
           <MotionBox d="flex" variants={simpleOpacity}>
             {SocialMedias.map((socMedia) => (
