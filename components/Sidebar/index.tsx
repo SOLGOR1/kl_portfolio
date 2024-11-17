@@ -9,6 +9,7 @@ import {
   Box,
   Icon,
   useBreakpointValue,
+  SimpleGrid,
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import styles from './styles.module.css'
@@ -122,6 +123,7 @@ const Sidebar = () => {
             like a Leek with a mission. 🌱 Its the meme revolution you've been
             waiting for!
           </MotionText>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>
           <MotionButton
             size="lg"
             variant="outline"
@@ -137,7 +139,24 @@ const Sidebar = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            Buy
+            Buy $LEEK
+          </MotionButton>
+          <MotionButton
+            size="lg"
+            variant="outline"
+            borderWidth="1px"
+            borderRadius="0"
+            fontWeight="normal"
+            fontSize="sm"
+            width="120px"
+            variants={simpleOpacity}
+            as={'a'}
+            href="https://jup.ag/swap/SOL-6VDrp2dSEQZfGZu6cc68M3EtjPLAGDGNw1AxqMHCJ4am"
+            target="_blank"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Buy $LP
           </MotionButton>
           <MotionButton
             size="lg"
@@ -156,6 +175,24 @@ const Sidebar = () => {
           >
             Stake
           </MotionButton>
+          <MotionButton
+            size="lg"
+            variant="outline"
+            borderWidth="1px"
+            borderRadius="0"
+            fontWeight="normal"
+            fontSize="sm"
+            width="120px"
+            variants={simpleOpacity}
+            as={'a'}
+            href="https://solgor.vercel.app/memebattle"
+            target="_blank"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Battle
+          </MotionButton>
+          </SimpleGrid>
 
           <MotionBox d="flex" variants={simpleOpacity}>
             {SocialMedias.map((socMedia) => (
