@@ -116,10 +116,10 @@ const Sidebar = () => {
             Because nothing says
             <Text variant="emphasis" as="span">
               {' '}
-              unmatched power, digital supremacy, and the future of humanity
+            unmatched power, digital supremacy, and the future of humanity
             </Text>
             <br />
-            like a Leek with a mission. 🌱 Its the meme revolution you never saw coming —
+            like a Leek with a mission. 🌱 Its the meme revolution you never saw coming
             and now, youre a part of it. Welcome to the new era.
           </MotionText>
 
