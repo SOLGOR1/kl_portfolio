@@ -41,7 +41,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         letterSpacing={1.8}
         style={{ fontVariantCaps: 'small-caps' }}
       >
-        My Vision
+        Our Vision
       </Heading>
       <Text variant="description">
         LEEK is a memecoin on a mission to <b>unite the degens</b> and shoot
