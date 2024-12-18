@@ -140,57 +140,6 @@ const Sidebar = () => {
           >
             Buy $LEEK
           </MotionButton>
-          <MotionButton
-            size="lg"
-            variant="outline"
-            borderWidth="1px"
-            borderRadius="0"
-            fontWeight="normal"
-            fontSize="sm"
-            width="120px"
-            variants={simpleOpacity}
-            as={'a'}
-            href="https://jup.ag/swap/SOL-6VDrp2dSEQZfGZu6cc68M3EtjPLAGDGNw1AxqMHCJ4am"
-            target="_blank"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Buy $LP
-          </MotionButton>
-          <MotionButton
-            size="lg"
-            variant="outline"
-            borderWidth="1px"
-            borderRadius="0"
-            fontWeight="normal"
-            fontSize="sm"
-            width="120px"
-            variants={simpleOpacity}
-            as={'a'}
-            href="https://stake.smithii.io/leekpowerstake"
-            target="_blank"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Stake
-          </MotionButton>
-          <MotionButton
-            size="lg"
-            variant="outline"
-            borderWidth="1px"
-            borderRadius="0"
-            fontWeight="normal"
-            fontSize="sm"
-            width="120px"
-            variants={simpleOpacity}
-            as={'a'}
-            href="https://solgor.vercel.app/memebattle"
-            target="_blank"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Battle
-          </MotionButton>
 
           <MotionBox d="flex" variants={simpleOpacity}>
             {SocialMedias.map((socMedia) => (
